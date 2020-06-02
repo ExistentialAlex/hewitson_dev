@@ -1,6 +1,6 @@
 <nav class="navbar">
-  <div class="navbar__item" *ngIf="logo">
-    <img class="navbar__logo" [src]="logo" />
+  <div class="navbar__logo" *ngIf="logo">
+    <img class="navbar__logo--img" [src]="logo" />
   </div>
   <a *ngFor="let link of links" [routerLink]="link.url" class="navbar__item">
     <fa-icon

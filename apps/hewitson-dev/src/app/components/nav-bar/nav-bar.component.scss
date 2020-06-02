@@ -5,9 +5,12 @@
   align-items: center;
   height: var(--nav-height);
   box-shadow: var(--shadow);
+  padding: 0 1rem;
 
   &__logo {
-    max-height: calc(var(--nav-height) * 0.8);
+    &--img {
+      max-height: calc(var(--nav-height) * 0.8);
+    }
   }
 
   &__item {
@@ -20,12 +23,18 @@
     color: var(--clr-dark);
     text-decoration: none;
 
-    &:first-child {
-      margin-left: 1rem;
-    }
-
     &--icon {
       margin-right: 0.25rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar {
+    justify-content: center;
+
+    &__item {
+      display: none;
     }
   }
 }
