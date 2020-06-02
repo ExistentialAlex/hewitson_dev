@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "projects": {
+    "hewitson-dev": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "apps/hewitson-dev",
+      "sourceRoot": "apps/hewitson-dev/src",
+      "prefix": "hewitson-dev",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/hewitson-dev",
+            "index": "apps/hewitson-dev/src/index.html",
+            "main": "apps/hewitson-dev/src/main.ts",
+            "polyfills": "apps/hewitson-dev/src/polyfills.ts",
+            "tsConfig": "apps/hewitson-dev/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/hewitson-dev/src/favicon.ico",
+              "apps/hewitson-dev/src/assets"
+            ],
+            "styles": ["apps/hewitson-dev/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/hewitson-dev/src/environments/environment.ts",
+                  "with": "apps/hewitson-dev/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "hewitson-dev:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "hewitson-dev:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "hewitson-dev:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/hewitson-dev/tsconfig.app.json",
+              "apps/hewitson-dev/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/hewitson-dev/**"]
+          }
+        },
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "options": {
+            "jestConfig": "apps/hewitson-dev/jest.config.js",
+            "tsConfig": "apps/hewitson-dev/tsconfig.spec.json",
+            "passWithNoTests": true,
+            "setupFile": "apps/hewitson-dev/src/test-setup.ts"
+          }
+        }
+      }
+    },
+    "hewitson-dev-e2e": {
+      "root": "apps/hewitson-dev-e2e",
+      "sourceRoot": "apps/hewitson-dev-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/hewitson-dev-e2e/cypress.json",
+            "tsConfig": "apps/hewitson-dev-e2e/tsconfig.e2e.json",
+            "devServerTarget": "hewitson-dev:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "hewitson-dev:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/hewitson-dev-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/hewitson-dev-e2e/**"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular",
+    "analytics": false
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "jest",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "jest"
+    }
+  },
+  "defaultProject": "hewitson-dev"
+}
