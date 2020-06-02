@@ -1,0 +1,31 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: var(--nav-height);
+  box-shadow: var(--shadow);
+
+  &__logo {
+    max-height: calc(var(--nav-height) * 0.8);
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    min-width: calc(var(--nav-height) * 1.25);
+    margin-right: 1rem;
+    color: var(--clr-dark);
+    text-decoration: none;
+
+    &:first-child {
+      margin-left: 1rem;
+    }
+
+    &--icon {
+      margin-right: 0.25rem;
+    }
+  }
+}

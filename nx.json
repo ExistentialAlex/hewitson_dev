@@ -25,6 +25,9 @@
     "hewitson-dev-e2e": {
       "tags": [],
       "implicitDependencies": ["hewitson-dev"]
+    },
+    "utilities": {
+      "tags": []
     }
   }
 }

@@ -1,0 +1,14 @@
+<nav class="navbar">
+  <div class="navbar__item" *ngIf="logo">
+    <img class="navbar__logo" [src]="logo" />
+  </div>
+  <a *ngFor="let link of links" [routerLink]="link.url" class="navbar__item">
+    <fa-icon
+      *ngIf="link.icon"
+      [icon]="link.icon"
+      size="lg"
+      class="navbar__item--icon"
+    ></fa-icon>
+    <h3>{{ link.title }}</h3>
+  </a>
+</nav>
