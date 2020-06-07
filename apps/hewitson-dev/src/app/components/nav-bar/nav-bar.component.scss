@@ -6,6 +6,7 @@
   height: var(--nav-height);
   box-shadow: var(--shadow);
   padding: 0 1rem;
+  background-color: var(--clr-secondary);
 
   &__logo {
     &--img {
@@ -19,8 +20,8 @@
     align-items: center;
     justify-content: flex-start;
     min-width: calc(var(--nav-height) * 1.25);
-    margin-right: 1rem;
-    color: var(--clr-dark);
+    margin-right: 1.5rem;
+    color: var(--clr-light);
     text-decoration: none;
 
     &--icon {

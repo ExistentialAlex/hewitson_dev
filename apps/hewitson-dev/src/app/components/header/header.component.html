@@ -1,0 +1,18 @@
+<div class="header">
+  <div class="header__img--container">
+    <img class="header__img" src="assets/img/profile-transparent.png" />
+  </div>
+  <div class="header__text--container">
+    <h2 class="header__text">
+      Professional
+    </h2>
+    <h2
+      class="header__text header__text--highlight"
+      [ngClass]="{
+        'header__text--hide': hide
+      }"
+    >
+      {{ currentWord }}
+    </h2>
+  </div>
+</div>
