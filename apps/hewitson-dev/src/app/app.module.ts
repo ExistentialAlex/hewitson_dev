@@ -8,6 +8,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { BottomNavComponent } from './components/bottom-nav/bottom-nav.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderComponent } from './components/header/header.component';
+import { ProjectCardComponent } from './components/project-card/project-card.component';
+import { ProjectListComponent } from './components/project-list/project-list.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +18,8 @@ import { HeaderComponent } from './components/header/header.component';
     NavBarComponent,
     BottomNavComponent,
     HeaderComponent,
+    ProjectCardComponent,
+    ProjectListComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
   providers: [],
