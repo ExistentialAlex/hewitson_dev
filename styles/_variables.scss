@@ -13,6 +13,8 @@
   --clr-primary: #b9d8c2;
   --clr-secondary: #9ac2c9;
   --clr-light: #ffffff;
+  --border-radius: 1rem;
+  --shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
 
   .light {
     --bg: var(--grey0);
@@ -22,7 +24,7 @@
     // --link-hover: saturate(darken(var(--clr-link), 15%), 10%);
     --text: var(--grey6);
     --text-hover: var(--clr-primary);
-    --border-clr: var(--clr-primary);
+    --border-clr: var(--grey1);
   }
   .dark {
     --bg: var(--grey5);
@@ -32,12 +34,6 @@
     --text-hover: var(--clr-secondary);
     --border-clr: var(--clr-secondary);
   }
-
-  /////////////////////
-  ////// Shadow ///////
-  /////////////////////
-
-  --shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
 
   /////////////////////
   ////// Z-index //////

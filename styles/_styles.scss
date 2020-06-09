@@ -20,3 +20,16 @@ body {
   margin-top: var(--size-l) + 0.5rem;
   height: calc(100vh - 3.5rem);
 }
+
+.btn {
+  background-color: var(--clr-primary);
+  color: var(--bg);
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--clr-primary);
+    background-color: var(--bg);
+  }
+}

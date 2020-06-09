@@ -1,0 +1,22 @@
+<div class="card">
+  <a class="card__img--container" [routerLink]="['/project', project.id]">
+    <img
+      class="card__img"
+      [src]="project.img ? project.img : 'assets/img/placeholder.png'"
+  /></a>
+  <div class="multi-button" *ngIf="displayIcons">
+    <button class=""><fa-icon [icon]="faHeart"></fa-icon></button>
+  </div>
+  <div class="card__overlay">
+    <div class="card__overlay--background"></div>
+    <h1 class="card__overlay--title">{{ project.title }}</h1>
+    <hr style="z-index: 2;" />
+    <h3 class="card__overlay--text">{{ project.description }}</h3>
+    <button
+      class="card__overlay--btn btn"
+      [routerLink]="['/project', project.id]"
+    >
+      <h3>Learn More</h3>
+    </button>
+  </div>
+</div>
