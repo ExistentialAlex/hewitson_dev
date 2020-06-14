@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
+import { ComponentsModule } from './common/components.module';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
@@ -8,8 +11,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { BottomNavComponent } from './components/bottom-nav/bottom-nav.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderComponent } from './components/header/header.component';
-import { ProjectCardComponent } from './components/project-card/project-card.component';
-import { ProjectListComponent } from './components/project-list/project-list.component';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,15 @@ import { ProjectListComponent } from './components/project-list/project-list.com
     NavBarComponent,
     BottomNavComponent,
     HeaderComponent,
-    ProjectCardComponent,
-    ProjectListComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FontAwesomeModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FontAwesomeModule,
+    ComponentsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFirestoreModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

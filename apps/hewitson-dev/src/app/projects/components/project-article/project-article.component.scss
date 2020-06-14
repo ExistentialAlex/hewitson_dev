@@ -1,0 +1,9 @@
+.article {
+  max-width: 100rem;
+  width: 100%;
+  text-align: left;
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+}

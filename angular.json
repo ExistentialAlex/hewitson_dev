@@ -25,8 +25,18 @@
               "apps/hewitson-dev/src/favicon.ico",
               "apps/hewitson-dev/src/assets"
             ],
-            "styles": ["apps/hewitson-dev/src/styles.scss"],
-            "scripts": []
+            "styles": [
+              "apps/hewitson-dev/src/styles.scss"
+            ],
+            "scripts": [
+              "node_modules/marked/lib/marked.js",
+              "node_modules/prismjs/prism.js",
+              "node_modules/prismjs/components/prism-json.min.js",
+              "node_modules/prismjs/components/prism-markdown.min.js",
+              "node_modules/prismjs/components/prism-scss.min.js",
+              "node_modules/prismjs/components/prism-typescript.min.js",
+              "node_modules/prismjs/components/prism-markup.min.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -83,7 +93,10 @@
               "apps/hewitson-dev/tsconfig.app.json",
               "apps/hewitson-dev/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!apps/hewitson-dev/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/hewitson-dev/**"
+            ]
           }
         },
         "test": {
@@ -94,6 +107,10 @@
             "passWithNoTests": true,
             "setupFile": "apps/hewitson-dev/src/test-setup.ts"
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
     },
@@ -118,8 +135,13 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": ["apps/hewitson-dev-e2e/tsconfig.e2e.json"],
-            "exclude": ["**/node_modules/**", "!apps/hewitson-dev-e2e/**"]
+            "tsConfig": [
+              "apps/hewitson-dev-e2e/tsconfig.e2e.json"
+            ],
+            "exclude": [
+              "**/node_modules/**",
+              "!apps/hewitson-dev-e2e/**"
+            ]
           }
         }
       }
@@ -137,7 +159,10 @@
               "libs/utilities/tsconfig.lib.json",
               "libs/utilities/tsconfig.spec.json"
             ],
-            "exclude": ["**/node_modules/**", "!libs/utilities/**"]
+            "exclude": [
+              "**/node_modules/**",
+              "!libs/utilities/**"
+            ]
           }
         },
         "test": {

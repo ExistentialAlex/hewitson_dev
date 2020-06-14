@@ -1,0 +1,14 @@
+.projects {
+  &__title {
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--text {
+      font-size: 5rem;
+    }
+  }
+
+  &__list {
+  }
+}

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Project } from '@hewitson-dev/utilities';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'hewitson-dev-project-list',
@@ -8,7 +9,7 @@ import { Project } from '@hewitson-dev/utilities';
 })
 export class ProjectListComponent implements OnInit {
   @Input() public title: string;
-  @Input() public projects: Project[];
+  @Input() public projects: Observable<Project[]>;
 
   constructor() {}
 

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "hewitson-dev": {
+      "hosting": {
+        "hewitson-dev": [
+          "hewitson-dev"
+        ]
+      }
+    }
+  }
+}
