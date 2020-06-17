@@ -1,6 +1,9 @@
 <div class="project" *ngIf="project">
   <div class="project__header">
-    <hewitson-dev-project-header></hewitson-dev-project-header>
+    <hewitson-dev-project-header
+      [title]="project.title"
+      [img]="project.img"
+    ></hewitson-dev-project-header>
   </div>
   <div class="project__article">
     <hewitson-dev-project-article

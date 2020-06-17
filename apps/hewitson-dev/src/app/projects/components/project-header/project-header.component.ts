@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'hewitson-dev-project-header',
   templateUrl: './project-header.component.html',
-  styleUrls: ['./project-header.component.scss']
+  styleUrls: ['./project-header.component.scss'],
 })
 export class ProjectHeaderComponent implements OnInit {
+  @Input() public title: string;
+  @Input() public img: string;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
