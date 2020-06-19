@@ -3,28 +3,30 @@
   // Colour Settings //
   /////////////////////
 
-  --grad0: #b6d2f6;
-  --grad1: #91bbf2;
-  --grad2: #5b98ec;
-  --grad3: #2478e5;
-  --grad4: #155bb7;
-  --grad5: #0f4080;
-  --grad6: #071e3d;
-  --clr-primary: #21e6c1;
+  --grad0: #f8f8f8;
+  --grad1: #dbe1e8;
+  --grad2: #b2becd;
+  --grad3: #6c7983;
+  --grad4: #454e56;
+  --grad5: #2a2e35;
+  --grad6: #12181b;
+  --clr-primary: #f54291;
   --clr-secondary: #2f89fc;
-  --clr-light: #edf4fd;
-  --clr-dark: #020912;
   --border-radius: 1rem;
   --shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
 
   .light {
-    --bg: var(--clr-light);
-    --bg-nav: var(--clr-light);
-    --bg-dropdown: var(--clr-light);
+    --bg: var(--grad0);
+    --bg-nav: var(--grad0);
+    --bg-dropdown: var(--grad0);
     --title: var(--clr-primary);
     --text: var(--clr-dark);
-    --text-hover: var(--clr-primary);
+    --text-hover: darken(var(--clr-primary), 15%);
     --border-clr: var(--grad0);
+    --btn: var(--clr-primary);
+    --bnt-hover: var(--grad0);
+    --btn-text: var(--grad0);
+    --btn-text-hover: var(--clr-primary);
   }
   .dark {
     --bg: var(--clr-dark);
