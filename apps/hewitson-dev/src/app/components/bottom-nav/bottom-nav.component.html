@@ -1,1 +1,39 @@
-<p>bottom-nav works!</p>
+<div class="nav__container">
+  <div class="nav">
+    <div class="nav__bubble--container">
+      <div *ngFor="let link of links" id="bubble1" class="nav__bubble">
+        <span class="icon"><fa-icon [icon]="link.icon"></fa-icon></span>
+      </div>
+      <!--       <div id="bubble4" class="bubble"><span class="icon"><i class="fas fa-user"></i></span></div> -->
+    </div>
+    <div class="nav__menu--container">
+      <div id="menu1" class="nav__menu" onclick="move('1', '16.5%', '#ffcc80')">
+        <fa-icon></fa-icon>
+      </div>
+    </div>
+  </div>
+  <div id="bgWrapper">
+    <div id="bg"></div>
+    <div id="bgBubble"></div>
+  </div>
+</div>
+
+<svg width="0" height="0">
+  <defs>
+    <filter id="goo">
+      <feGaussianBlur
+        in="SourceGraphic"
+        stdDeviation="20"
+        result="blur"
+        id="blurFilter"
+      />
+      <feColorMatrix
+        in="blur"
+        mode="matrix"
+        values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 30 -15"
+        result="goo"
+      />
+      <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+    </filter>
+  </defs>
+</svg>
