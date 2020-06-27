@@ -2,7 +2,12 @@
   <div class="navbar__logo" *ngIf="logo">
     <img class="navbar__logo--img" [src]="logo" />
   </div>
-  <a *ngFor="let link of links" [routerLink]="link.url" class="navbar__item">
+  <a
+    *ngFor="let link of links"
+    [routerLink]="link.url"
+    class="navbar__item"
+    routerLinkActive="navbar__item--active"
+  >
     <fa-icon
       *ngIf="link.icon"
       [icon]="link.icon"

@@ -42,7 +42,8 @@
       }
     }
 
-    &:hover {
+    &:hover,
+    &--active {
       .navbar {
         &__item {
           &--text::after {
