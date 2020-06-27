@@ -4,7 +4,7 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: HomePageComponent,
   },
   {
@@ -16,6 +16,15 @@ const routes: Routes = [
     path: 'about',
     loadChildren: () =>
       import('./about/about.module').then((m) => m.AboutModule),
+  },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full',
+  },
+  {
+    path: '**',
+    redirectTo: 'home',
   },
 ];
 

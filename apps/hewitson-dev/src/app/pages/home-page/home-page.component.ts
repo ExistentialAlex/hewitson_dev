@@ -13,30 +13,6 @@ export class HomePageComponent implements OnInit {
   public projects: Observable<Project[]>;
 
   constructor(private readonly firestore: AngularFirestore) {
-    // this.projects = [
-    //   {
-    //     id: 'id1',
-    //     title: 'Project 1',
-    //     description: 'this is the first test project',
-    //     mdFile: '',
-    //     img: 'assets/img/profile.jpg',
-    //   },
-
-    //   {
-    //     id: 'id2',
-    //     title: 'Project 2',
-    //     description: 'this is the first test project',
-    //     mdFile: '',
-    //     img: 'assets/img/profile.jpg',
-    //   },
-
-    //   {
-    //     id: 'id3',
-    //     title: 'Project 3',
-    //     description: 'this is the first test project',
-    //     mdFile: '',
-    //   },
-    // ];
     this.projects = this.firestore
       .collection<Project>('hew_projects')
       .snapshotChanges()
@@ -50,7 +26,6 @@ export class HomePageComponent implements OnInit {
           });
         })
       );
-    this.projects.subscribe((projects) => console.log(projects));
   }
 
   ngOnInit(): void {}

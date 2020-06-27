@@ -17,18 +17,21 @@ export class AppComponent {
   public links: Link[] = [
     {
       title: 'Home',
-      url: '',
+      url: '/home',
       icon: faHome,
+      position: '16.5%',
     },
     {
       title: 'About',
       url: '/about',
       icon: faUser,
+      position: '50%',
     },
     {
       title: 'Projects',
       url: '/projects',
       icon: faLaptopCode,
+      position: '83.25%',
     },
   ];
 }
