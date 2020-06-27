@@ -1,0 +1,13 @@
+.header {
+  background-size: cover;
+  width: 100vw;
+  height: 30rem;
+  transform: translateX(-5rem);
+  background-position: 30%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  &__title {
+    color: var(--text);
+  }
+}

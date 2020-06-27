@@ -3,41 +3,40 @@
   // Colour Settings //
   /////////////////////
 
-  --grey0: #f8f8f8;
-  --grey1: #dbe1e8;
-  --grey2: #b2becd;
-  --grey3: #6c7983;
-  --grey4: #454e56;
-  --grey5: #2a2e35;
-  --grey6: #12181b;
-  --clr-primary: #b9d8c2;
-  --clr-secondary: #9ac2c9;
-  --clr-light: #ffffff;
+  --grad0: #f8f8f8;
+  --grad1: #dbe1e8;
+  --grad2: #b2becd;
+  --grad3: #6c7983;
+  --grad4: #454e56;
+  --grad5: #2a2e35;
+  --grad6: #12181b;
+  --clr-primary: #f54291;
+  --clr-secondary: #2f89fc;
+  --border-radius: 1rem;
+  --shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
 
   .light {
-    --bg: var(--grey0);
-    --bg-nav: var(--grey0);
-    --bg-dropdown: var(--grey0);
-    // --link: var(--grey0);
-    // --link-hover: saturate(darken(var(--clr-link), 15%), 10%);
-    --text: var(--grey6);
-    --text-hover: var(--clr-primary);
-    --border-clr: var(--clr-primary);
+    --bg: var(--grad0);
+    --bg-nav: var(--grad0);
+    --bg-dropdown: var(--grad0);
+    --title: var(--clr-primary);
+    --text: var(--clr-dark);
+    --text-hover: darken(var(--clr-primary), 15%);
+    --border-clr: var(--grad0);
+    --btn: var(--clr-primary);
+    --bnt-hover: var(--grad0);
+    --btn-text: var(--grad0);
+    --btn-text-hover: var(--clr-primary);
   }
   .dark {
-    --bg: var(--grey5);
-    --bg-nav: var(--grey5);
-    --bg-dropdown: var(--grey6);
-    --text: var(--grey0);
+    --bg: var(--clr-dark);
+    --bg-nav: var(--clr-dark);
+    --bg-dropdown: var(--clr-dark);
+    --title: var(--clr-primary);
+    --text: var(--grad0);
     --text-hover: var(--clr-secondary);
     --border-clr: var(--clr-secondary);
   }
-
-  /////////////////////
-  ////// Shadow ///////
-  /////////////////////
-
-  --shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
 
   /////////////////////
   ////// Z-index //////

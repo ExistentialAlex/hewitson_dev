@@ -4,7 +4,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  padding: 2.5rem 5rem;
+  padding: 3rem 5rem 2.5rem;
 
   &__img {
     max-width: calc(var(--size-xxxl) * 2);
@@ -27,7 +27,7 @@
 
     &--highlight {
       color: var(--clr-primary);
-      width: 7rem;
+      width: 8rem;
       margin-left: 0.5rem;
     }
 
@@ -37,9 +37,17 @@
   }
 }
 
+@media only screen and (min-width: 600px) and (max-width: 1000px) {
+  .header {
+    --header-height: 20rem;
+    padding: 2.5rem 0rem;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .header {
-    padding: 2.5rem 1rem;
+    --header-height: 20rem;
+    padding: 2.5rem 0rem;
 
     &__img {
       max-width: 100%;
