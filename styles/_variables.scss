@@ -12,6 +12,7 @@
   --grey6: #12181b;
   --clr-primary: #b9d8c2;
   --clr-secondary: #9ac2c9;
+  --clr-light: #ffffff;
 
   .light {
     --bg: var(--grey0);
@@ -70,6 +71,8 @@
   --font-baseline: calc(var(--font-size-body) * 1.5);
 
   // Distances
+  --size-xxxl: /* 432 */ calc(var(--font-baseline) * 16);
+  --size-xxl: /* 216 */ calc(var(--font-baseline) * 8);
   --size-xl: /* 108px */ calc(var(--font-baseline) * 4);
   --size-l:  /* 54px */ calc(var(--font-baseline) * 2);
   --size-m:  /* 27px */ calc(var(--font-baseline));
@@ -80,5 +83,5 @@
   // Navbar Settings //
   /////////////////////
 
-  --nav-height: 4rem;
+  --nav-height: 3rem;
 }
