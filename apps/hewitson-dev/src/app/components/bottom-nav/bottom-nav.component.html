@@ -1,20 +1,30 @@
-<div class="nav__container">
-  <div class="nav">
-    <div class="nav__bubble--container">
-      <div *ngFor="let link of links" id="bubble1" class="nav__bubble">
-        <span class="icon"><fa-icon [icon]="link.icon"></fa-icon></span>
-      </div>
-      <!--       <div id="bubble4" class="bubble"><span class="icon"><i class="fas fa-user"></i></span></div> -->
+<div class="navbar__container">
+  <div class="navbar">
+    <div class="navbar__bubble--container">
+      <a
+        *ngFor="let link of links"
+        class="navbar__bubble"
+        [routerLink]="link.url"
+        routerLinkActive="navbar__bubble--active"
+        (click)="move(link.position)"
+      >
+        <span class="navbar__icon"><fa-icon [icon]="link.icon"></fa-icon></span>
+      </a>
     </div>
-    <div class="nav__menu--container">
-      <div id="menu1" class="nav__menu" onclick="move('1', '16.5%', '#ffcc80')">
-        <fa-icon></fa-icon>
-      </div>
+    <div class="navbar__menu--container">
+      <a
+        *ngFor="let link of links"
+        class="navbar__menu"
+        [routerLink]="link.url"
+        (click)="move(link.position)"
+      >
+        <fa-icon [icon]="link.icon"></fa-icon>
+      </a>
     </div>
   </div>
   <div id="bgWrapper">
     <div id="bg"></div>
-    <div id="bgBubble"></div>
+    <div id="bgBubble" [style.left]="currentPosition"></div>
   </div>
 </div>
 
