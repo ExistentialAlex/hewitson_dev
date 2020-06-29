@@ -12,6 +12,9 @@ import { BottomNavComponent } from './components/bottom-nav/bottom-nav.component
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HeaderComponent } from './components/header/header.component';
 import { environment } from '../environments/environment';
+import { BusinessCardComponent } from './components/business-card/business-card.component';
+import { ContactFormComponent } from './components/contact-form/contact-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,6 +23,8 @@ import { environment } from '../environments/environment';
     NavBarComponent,
     BottomNavComponent,
     HeaderComponent,
+    BusinessCardComponent,
+    ContactFormComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +33,7 @@ import { environment } from '../environments/environment';
     ComponentsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
