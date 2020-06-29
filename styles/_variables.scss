@@ -20,7 +20,7 @@
     --bg-nav: var(--grad0);
     --bg-dropdown: var(--grad0);
     --title: var(--clr-primary);
-    --text: var(--clr-dark);
+    --text: var(--grad6);
     --text-hover: darken(var(--clr-primary), 15%);
     --border-clr: var(--grad0);
     --btn: var(--clr-primary);
@@ -29,9 +29,9 @@
     --btn-text-hover: var(--clr-primary);
   }
   .dark {
-    --bg: var(--clr-dark);
-    --bg-nav: var(--clr-dark);
-    --bg-dropdown: var(--clr-dark);
+    --bg: var(--grad6);
+    --bg-nav: var(--grad6);
+    --bg-dropdown: var(--grad6);
     --title: var(--clr-primary);
     --text: var(--grad0);
     --text-hover: var(--clr-secondary);
