@@ -5,11 +5,12 @@
   padding: 0.5rem 2rem 0rem;
   box-shadow: var(--shadow);
   border-radius: var(--border-radius);
-
+  background: var(--bg-nav);
   &__field {
     width: 100%;
     position: relative;
     border-bottom: 2px solid var(--grad1);
+    z-index: var(--z-xs);
 
     &--label,
     &--textarea {

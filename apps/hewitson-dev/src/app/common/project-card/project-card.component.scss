@@ -10,7 +10,9 @@
   color: var(--text);
   background-size: cover;
 
-  &:hover {
+  &:hover,
+  &:focus,
+  &:active {
     .card {
       &__overlay {
         opacity: 1;

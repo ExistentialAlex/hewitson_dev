@@ -20,6 +20,7 @@
   left: 0;
   width: 100%;
   display: none;
+  z-index: var(--z-l);
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1000px) {
