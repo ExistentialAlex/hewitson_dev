@@ -36,10 +36,11 @@
     --text: var(--grad0);
     --text-hover: var(--clr-secondary);
     --border-clr: var(--clr-secondary);
+    --shadow: rgba(178, 190, 205, 0.3) 0px 2px 5px 0px;
   }
 
   /////////////////////
-  ////// Z-index //////
+  //     Z-index     //
   /////////////////////
 
   --z-max: 1000;
@@ -52,7 +53,7 @@
   --z-min: 0;
 
   /////////////////////
-  //////// Size ///////
+  //       Size      //
   /////////////////////
 
   // Font sizes

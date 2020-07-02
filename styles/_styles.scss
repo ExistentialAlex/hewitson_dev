@@ -30,8 +30,10 @@ body {
   box-shadow: var(--shadow);
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--clr-primary);
     background-color: var(--btn-text);
+    outline: none;
   }
 }
