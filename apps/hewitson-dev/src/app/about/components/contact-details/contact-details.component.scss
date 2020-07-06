@@ -1,0 +1,22 @@
+.details {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+  &__img {
+    max-width: 100%;
+    border-radius: var(--border-radius);
+  }
+
+  &__name {
+    font-weight: 600;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  &__email {
+    margin: 0;
+  }
+}

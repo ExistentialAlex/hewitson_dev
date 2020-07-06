@@ -37,3 +37,10 @@ body {
     outline: none;
   }
 }
+
+.card {
+  background: var(--bg-card);
+  border: none;
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
+}
