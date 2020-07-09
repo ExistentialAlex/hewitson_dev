@@ -2,7 +2,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0.5rem 2rem 0rem;
+  padding: 0rem 2rem 0rem;
+  height: 100%;
+  max-height: 100%;
   &__field {
     width: 100%;
     position: relative;
@@ -21,7 +23,7 @@
     }
 
     &--textarea {
-      transform: translateY(-8rem);
+      transform: translateY(-11rem);
     }
 
     &--input,
@@ -44,7 +46,7 @@
     }
 
     &--input-area {
-      min-height: 7.5rem;
+      min-height: 10rem;
     }
 
     &::after {
@@ -75,7 +77,7 @@
     &:focus-within .contact__field--textarea,
     .contact__field--input-area:not(:placeholder-shown)
       + .contact__field--textarea {
-      transform: scale(0.8) translateY(-12.5rem);
+      transform: scale(0.8) translateY(-15.5rem);
     }
 
     &:nth-child(2) {
@@ -91,6 +93,7 @@
     outline: none;
     border-radius: var(--border-radius);
     padding: 0 2rem;
+    margin-top: auto;
   }
 
   &__message {

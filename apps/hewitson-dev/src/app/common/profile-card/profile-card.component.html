@@ -1,0 +1,11 @@
+<div class="card profile">
+  <img class="profile__img" [src]="image" />
+  <h2 class="profile__name">{{ name }}</h2>
+  <p class="profile__job">{{ job }}</p>
+  <p class="profile__email">{{ email }}</p>
+  <div class="profile__social">
+    <button class="profile__icon" *ngFor="let icon of socialLinks" (click)="navigate(icon.url)">
+      <fa-icon [icon]="icon.icon"></fa-icon>
+    </button>
+  </div>
+</div>

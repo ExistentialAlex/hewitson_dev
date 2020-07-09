@@ -1,7 +1,6 @@
-<h1 *ngIf="title" class="list__title">{{ title }}</h1>
-<div class="list">
-  <div class="list__grid">
-    <div class="list__grid--item" *ngFor="let project of projects | async">
+<div class="projects">
+  <div class="projects__grid">
+    <div class="projects__grid--item" *ngFor="let project of projects | async">
       <hewitson-dev-project-card
         [project]="project"
         [displayIcons]="false"

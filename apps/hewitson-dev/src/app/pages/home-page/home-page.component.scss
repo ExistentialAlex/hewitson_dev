@@ -2,6 +2,7 @@
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 5rem;
 
   &__title {
     border-bottom: 2px solid var(--title);
@@ -13,5 +14,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+}
+
+.list {
+  margin-top: 5rem;
+  &__title {
+    border-bottom: 2px solid var(--title);
+    padding-bottom: 0.5rem;
+    color: var(--text);
   }
 }

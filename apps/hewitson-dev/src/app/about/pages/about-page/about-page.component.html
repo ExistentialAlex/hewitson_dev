@@ -1,11 +1,13 @@
 <div class="full-page about">
   <div class="about__grid">
     <div class="about__grid--left">
-      <hewitson-dev-contact-details
-        [img]="img"
+      <hewitson-dev-profile-card
+        [image]="image"
         [name]="name"
+        [job]="job"
         [email]="email"
-      ></hewitson-dev-contact-details>
+        [socialLinks]="socialLinks"
+      ></hewitson-dev-profile-card>
       <hewitson-dev-skills></hewitson-dev-skills>
     </div>
     <div class="about__grid--right">
