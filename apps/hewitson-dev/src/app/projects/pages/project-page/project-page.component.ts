@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Project } from '@hewitson-dev/utilities';
+import { Project, hewProjects } from '@hewitson-dev/utilities';
 import { map } from 'rxjs/operators';
 import { Observable } from 'rxjs';
 
@@ -19,7 +19,7 @@ export class ProjectPageComponent implements OnInit {
   ) {
     this.activatedRoute.params.subscribe((params) => {
       this.firestore
-        .doc<Project>(`hew_projects/${params['id']}`)
+        .doc<Project>(`${hewProjects}/${params['id']}`)
         .valueChanges()
         .subscribe((project) => {
           this.project = { id: params['id'], ...project };

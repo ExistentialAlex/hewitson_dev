@@ -1,8 +1,22 @@
 <div class="history card">
-    <div class="history__item">
-        <h2 class="history__title"></h2>
-        <p class="history__company"></p>
-        <p class="history__dates"></p>
-        <p class="history__description"></p>
-    </div>
+  <fa-icon
+    [icon]="faTimes"
+    size="2x"
+    class="history__icon--none"
+    *ngIf="!history || history.length < 1"
+  ></fa-icon>
+  <h1 class="history__none" *ngIf="!history || history.length < 1">
+    No work history
+  </h1>
+  <div class="history__item" *ngFor="let work of history">
+    <h3 class="history__top">
+        <div class="history__title">{{ work.title }}</div> -
+      <a class="history__company">{{ work.company }}</a>
+    </h3>
+    <p class="history__dates">
+      {{ work.dates[0] | date:'MM yyyy' }} -
+      {{ getSecondDate(work.dates[1]) | date:'MM yyyy' }}
+    </p>
+    <p class="history__description">{{ work.description }}</p>
+  </div>
 </div>

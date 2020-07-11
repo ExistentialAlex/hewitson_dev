@@ -7,6 +7,7 @@ import { WorkHistoryComponent } from './components/work-history/work-history.com
 import { SkillsComponent } from './components/skills/skills.component';
 import { ContactDetailsComponent } from './components/contact-details/contact-details.component';
 import { ComponentsModule } from '../common/components.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { ComponentsModule } from '../common/components.module';
   imports: [
     CommonModule,
     AboutRoutingModule,
-    ComponentsModule
+    ComponentsModule,
+    FontAwesomeModule
   ]
 })
 export class AboutModule { }

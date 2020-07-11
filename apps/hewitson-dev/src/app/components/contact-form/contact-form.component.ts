@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { hewContactRequests } from '@hewitson-dev/utilities';
 
 @Component({
   selector: 'hewitson-dev-contact-form',
@@ -66,7 +67,7 @@ export class ContactFormComponent {
     }
 
     try {
-      await this.firestore.collection('hew_contacts').add({
+      await this.firestore.collection(hewContactRequests).add({
         name: this.name.value,
         email: this.email.value,
         subject: this.subject.value,
@@ -76,9 +77,9 @@ export class ContactFormComponent {
     } catch (error) {
       const message = 'An error occured while sending the message';
       this.firestore.collection('hew_errors').add({
-        time: Date.now(),
         error,
         message,
+        time: Date.now(),
       });
       this.formMessage = message;
     }

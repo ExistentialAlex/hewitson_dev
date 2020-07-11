@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Project, SocialLink } from '@hewitson-dev/utilities';
+import { Project, SocialLink, hewProjects } from '@hewitson-dev/utilities';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -21,7 +21,7 @@ export class HomePageComponent implements OnInit {
 
   constructor(private readonly firestore: AngularFirestore) {
     this.projects = this.firestore
-      .collection<Project>('hew_projects')
+      .collection<Project>(hewProjects)
       .snapshotChanges()
       .pipe(
         map((projects) => {
