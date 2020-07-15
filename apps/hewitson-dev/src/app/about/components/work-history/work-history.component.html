@@ -11,7 +11,7 @@
   <div class="history__item" *ngFor="let work of history">
     <h3 class="history__top">
         <div class="history__title">{{ work.title }}</div> -
-      <a class="history__company">{{ work.company }}</a>
+      <a class="history__company" [href]="work.url">{{ work.company }}</a>
     </h3>
     <p class="history__dates">
       {{ work.dates[0] | date:'MM yyyy' }} -

@@ -17,6 +17,15 @@ body {
   color: var(--text);
 }
 
+a {
+  text-decoration: none;
+
+  &:active {
+    text-decoration: none;
+    color: var(--text);
+  }
+}
+
 .container {
   margin-top: var(--size-l) + 0.5rem;
   height: calc(100vh - 3.5rem);
@@ -35,6 +44,21 @@ body {
     color: var(--clr-primary);
     background-color: var(--btn-text);
     outline: none;
+  }
+
+  &--border {
+    background-color: var(--btn-text);
+    color: var(--clr-primary);
+    border: 1px solid var(--clr-primary);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      color: var(--btn-text);
+      background-color: var(--clr-primary);
+      outline: none;
+    }
   }
 }
 
