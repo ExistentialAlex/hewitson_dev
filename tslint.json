@@ -23,7 +23,7 @@
     "forin": true,
     "import-blacklist": [true, "rxjs/Rx"],
     "interface-over-type-literal": true,
-    "member-access": false,
+    "member-access": true,
     "member-ordering": [
       true,
       {
