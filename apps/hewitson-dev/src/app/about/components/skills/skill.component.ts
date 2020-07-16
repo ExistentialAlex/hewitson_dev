@@ -6,14 +6,18 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'hewitson-dev-skill',
   template: `
-    <h2 [id]="skill.id" class="skill">
+    <h2 [id]="skill.id" class="skill" [ngClass]="{'skill--active': skill.open }">
       {{ skill.skill
       }}<fa-icon
+        *ngIf="skill.description"
         class="skill__icon"
         [icon]="faPlus"
-        (click)="open(skill.id)"
+        (click)="open()"
       ></fa-icon>
     </h2>
+    <div *ngIf="skill.description" class="skill__description" [ngClass]="{'skill__description--active': skill.open }">
+      <p class="skill__description--text">{{ skill.description }}</p>
+    </div>
   `,
   styleUrls: ['./skills.component.scss']
 })
@@ -26,11 +30,7 @@ export class SkillComponent {
     this.faPlus = faPlus;
   }
 
-  public open(id: string) {
-    const skillActive = 'skill--active';
-    if (document.getElementById(id).classList.contains(skillActive)) {
-      return document.getElementById(id).classList.remove(skillActive);
-    }
-    return document.getElementById(id).classList.add(skillActive);
+  public open() {
+    return this.skill.open = !this.skill.open;
   }
 }

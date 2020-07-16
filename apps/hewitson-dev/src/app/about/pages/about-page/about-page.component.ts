@@ -51,17 +51,7 @@ export class AboutPageComponent {
       .subscribe(history => (this.history = history));
     this.firestore
       .collection<Skill>(hewSkills)
-      .snapshotChanges()
-      .pipe(
-        map(skills => {
-          return skills.map(skill => {
-            return {
-              id: skill.payload.doc.id,
-              ...skill.payload.doc.data()
-            };
-          });
-        })
-      )
+      .valueChanges()
       .subscribe(skills => (this.skills = skills));
   }
 }

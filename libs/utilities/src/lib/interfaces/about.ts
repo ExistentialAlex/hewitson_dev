@@ -10,4 +10,5 @@ export interface Skill {
   id: string;
   skill: string;
   description: string;
+  open: boolean;
 }
