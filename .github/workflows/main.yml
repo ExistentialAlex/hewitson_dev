@@ -16,9 +16,8 @@ jobs:
     - uses: actions/setup-node@master
       with:
         node-version: '10.x'
-    - run: npm install @angular/cli
     - run: npm install
-    - run: ng build hewitson-dev --prod
+    - run: npm run build hewitson-dev -- --prod
     - uses: w9jds/firebase-action@master
       with:
         args: deploy --only hosting
