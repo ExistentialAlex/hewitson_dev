@@ -11,16 +11,19 @@
   --grad5: #2a2e35;
   --grad6: #12181b;
   --clr-primary: #f54291;
-  --clr-secondary: #2f89fc;
+  --clr-primary-hover: #CB2D6F;
+  --clr-accent: #6A7CE9;
   --border-radius: 1rem;
   --shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
 
   .light {
     --bg: var(--grad0);
-    --bg-nav: var(--grad0);
+    --bg-nav: #ffffff;
+    --bg-card: #ffffff;
     --bg-dropdown: var(--grad0);
     --title: var(--clr-primary);
-    --text: var(--clr-dark);
+    --text: var(--grad6);
+    --text-muted: var(--grad2);
     --text-hover: darken(var(--clr-primary), 15%);
     --border-clr: var(--grad0);
     --btn: var(--clr-primary);
@@ -29,17 +32,18 @@
     --btn-text-hover: var(--clr-primary);
   }
   .dark {
-    --bg: var(--clr-dark);
-    --bg-nav: var(--clr-dark);
-    --bg-dropdown: var(--clr-dark);
+    --bg: var(--grad6);
+    --bg-nav: var(--grad5);
+    --bg-dropdown: var(--grad5);
     --title: var(--clr-primary);
     --text: var(--grad0);
     --text-hover: var(--clr-secondary);
     --border-clr: var(--clr-secondary);
+    --shadow: rgba(178, 190, 205, 0.3) 0px 2px 5px 0px;
   }
 
   /////////////////////
-  ////// Z-index //////
+  //     Z-index     //
   /////////////////////
 
   --z-max: 1000;
@@ -52,7 +56,7 @@
   --z-min: 0;
 
   /////////////////////
-  //////// Size ///////
+  //       Size      //
   /////////////////////
 
   // Font sizes

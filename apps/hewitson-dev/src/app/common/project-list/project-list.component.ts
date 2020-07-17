@@ -8,7 +8,6 @@ import { Observable } from 'rxjs';
   styleUrls: ['./project-list.component.scss'],
 })
 export class ProjectListComponent implements OnInit {
-  @Input() public title: string;
   @Input() public projects: Observable<Project[]>;
 
   constructor() {}

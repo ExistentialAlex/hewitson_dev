@@ -1,14 +1,8 @@
-.list {
-  &__title {
-    border-bottom: 2px solid var(--title);
-    padding-bottom: 0.5rem;
-    color: var(--text);
-  }
-
+.projects {
   &__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    align-items: center;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
     grid-gap: 2rem;
+    justify-content: space-evenly;
   }
 }

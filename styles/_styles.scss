@@ -14,6 +14,16 @@ body {
   overflow-y: auto;
   -webkit-font-smoothing: antialiased;
   background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+
+  &:active {
+    text-decoration: none;
+    color: var(--text);
+  }
 }
 
 .container {
@@ -23,13 +33,38 @@ body {
 
 .btn {
   background-color: var(--clr-primary);
-  color: var(--bg);
+  color: var(--btn-text);
   border: none;
   border-radius: 1rem;
+  box-shadow: var(--shadow);
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--clr-primary);
-    background-color: var(--bg);
+    background-color: var(--btn-text);
+    outline: none;
   }
+
+  &--border {
+    background-color: var(--btn-text);
+    color: var(--clr-primary);
+    border: 1px solid var(--clr-primary);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      color: var(--btn-text);
+      background-color: var(--clr-primary);
+      outline: none;
+    }
+  }
+}
+
+.card {
+  background: var(--bg-card);
+  border: none;
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
 }

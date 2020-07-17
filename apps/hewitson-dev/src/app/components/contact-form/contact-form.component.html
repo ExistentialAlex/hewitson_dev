@@ -1,0 +1,51 @@
+<form class="contact card" [formGroup]="contactForm">
+  <div class="contact__field">
+    <input
+      class="contact__field--input"
+      name="name"
+      type="text"
+      placeholder=" "
+      formControlName="name"
+    />
+    <label for="name" class="contact__field--label">Name</label>
+  </div>
+  <p *ngIf="nameError" class="contact__message">Please provide a name</p>
+  <div class="contact__field">
+    <input
+      class="contact__field--input"
+      type="email"
+      name="email"
+      placeholder=" "
+      formControlName="email"
+    />
+    <label for="email" class="contact__field--label">Email</label>
+  </div>
+  <p *ngIf="emailError" class="contact__message">Please provide an email</p>
+  <div class="contact__field">
+    <input
+      class="contact__field--input"
+      name="subject"
+      type="text"
+      placeholder=" "
+      formControlName="subject"
+    />
+    <label for="subject" class="contact__field--label">Subject</label>
+  </div>
+  <p *ngIf="subjectError" class="contact__message">Please provide a subject</p>
+  <div class="contact__field">
+    <textarea
+      class="contact__field--input-area"
+      name="message"
+      placeholder=" "
+      formControlName="message"
+    ></textarea>
+    <label for="message" class="contact__field--textarea">Message</label>
+  </div>
+  <p *ngIf="messageError" class="contact__message">Please provide a message</p>
+  <button type="submit" class="contact__btn btn" (click)="submit()">
+    <h3 class="contact__btn--text">Submit</h3>
+  </button>
+  <div class="contact__message" *ngIf="formMessage">
+    <p class="contact__message--text">{{ formMessage }}</p>
+  </div>
+</form>
