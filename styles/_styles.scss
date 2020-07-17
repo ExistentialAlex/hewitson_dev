@@ -1,22 +1,70 @@
 @import 'variables';
 
 html {
-  height: 100%;
+  min-height: 100%;
 }
 
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   overflow-x: hidden;
   overflow-y: auto;
   -webkit-font-smoothing: antialiased;
   background: var(--bg);
+  color: var(--text);
+}
+
+a {
+  text-decoration: none;
+
+  &:active {
+    text-decoration: none;
+    color: var(--text);
+  }
 }
 
 .container {
   margin-top: var(--size-l) + 0.5rem;
   height: calc(100vh - 3.5rem);
+}
+
+.btn {
+  background-color: var(--clr-primary);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 1rem;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: var(--clr-primary);
+    background-color: var(--btn-text);
+    outline: none;
+  }
+
+  &--border {
+    background-color: var(--btn-text);
+    color: var(--clr-primary);
+    border: 1px solid var(--clr-primary);
+    border-radius: 1rem;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      color: var(--btn-text);
+      background-color: var(--clr-primary);
+      outline: none;
+    }
+  }
+}
+
+.card {
+  background: var(--bg-card);
+  border: none;
+  box-shadow: var(--shadow);
+  border-radius: 1rem;
 }

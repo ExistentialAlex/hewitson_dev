@@ -1,0 +1,60 @@
+.history {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  &__icon {
+    &--none {
+      opacity: 0.5;
+    }
+  }
+
+  &__none {
+    margin: 0;
+  }
+
+  &__item {
+    width: 100%;
+  }
+
+  &__top {
+    font-weight: 500;
+    margin: 0;
+    display: flex;
+  }
+
+  &__title {
+    margin: 0;
+    margin-right: 0.5rem;
+  }
+
+  &__company {
+    margin: 0;
+    margin-left: 0.5rem;
+
+    &:hover {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    &::after {
+      content: '';
+      position: relative;
+      display: block;
+      height: 2px;
+      background: var(--clr-primary);
+      transform: scaleX(0);
+      transform-origin: 0%;
+      transition: transform 500ms ease;
+      top: -3px;
+    }
+  }
+
+  &__dates {
+      margin: 0;
+      color: var(--text-muted);
+  }
+}

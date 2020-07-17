@@ -1,0 +1,21 @@
+<div class="card">
+  <div
+    class="card__front"
+    [style.background-image]="'url(' + image + ')'"
+  ></div>
+  <div class="card__back">
+    <h2 class="card__back--title">
+      {{ name }}<br />
+      <span class="card__back--subtitle">{{ job }}</span>
+    </h2>
+    <p class="card__back--text">{{ email }}</p>
+    <div class="card__back--social">
+      <a
+        *ngFor="let link of socialLinks"
+        class="card__back--icon"
+        (click)="navigate(link.url)"
+        ><fa-icon [icon]="link.icon"></fa-icon
+      ></a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,106 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0rem 2rem 0rem;
+  height: 100%;
+  max-height: 100%;
+  &__field {
+    width: 100%;
+    position: relative;
+    border-bottom: 2px solid var(--grad1);
+    z-index: var(--z-xs);
+
+    &--label,
+    &--textarea {
+      font-size: 1.2rem;
+      z-index: -1;
+      position: absolute;
+      display: block;
+      transform: translateY(-2rem);
+      transform-origin: 0%;
+      transition: transform 400ms ease;
+    }
+
+    &--textarea {
+      transform: translateY(-11rem);
+    }
+
+    &--input,
+    &--input-area {
+      width: 100%;
+      max-width: 100%;
+      margin: 2rem auto 0.25rem;
+      min-height: 2rem;
+      outline: none;
+      border: none;
+      overflow: hidden;
+      padding: 0.25rem 0;
+      background: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+
+      &:invalid {
+        color: red;
+      }
+    }
+
+    &--input-area {
+      min-height: 10rem;
+    }
+
+    &::after {
+      content: '';
+      position: relative;
+      display: block;
+      height: 3px;
+      background: var(--clr-primary);
+      transform: scaleX(0);
+      transform-origin: 50%;
+      transition: transform 500ms ease;
+      top: 2px;
+    }
+
+    &:focus-within {
+      border-color: transparent;
+
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    &:focus-within .contact__field--label,
+    .contact__field--input:not(:placeholder-shown) + .contact__field--label {
+      transform: scale(0.8) translateY(-5rem);
+    }
+
+    &:focus-within .contact__field--textarea,
+    .contact__field--input-area:not(:placeholder-shown)
+      + .contact__field--textarea {
+      transform: scale(0.8) translateY(-15.5rem);
+    }
+
+    &:nth-child(2) {
+      .contact__field--input {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+
+  &__btn {
+    margin: 1rem;
+    border: none;
+    outline: none;
+    border-radius: var(--border-radius);
+    padding: 0 2rem;
+    margin-top: auto;
+  }
+
+  &__message {
+    margin: 0;
+    font-size: 0.75rem;
+    margin-right: auto;
+    margin-top: 0.25rem;
+    color: var(--clr-primary);
+  }
+}

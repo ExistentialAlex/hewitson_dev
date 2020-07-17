@@ -1,4 +1,11 @@
 {
+  "extends": [
+    "tslint:latest",
+    "tslint-eslint-rules",
+    "tslint-config-airbnb",
+    "tslint-sonarts",
+    "tslint-config-prettier"
+  ],
   "rulesDirectory": [
     "node_modules/@nrwl/workspace/src/tslint",
     "node_modules/codelyzer"
@@ -16,7 +23,7 @@
     "forin": true,
     "import-blacklist": [true, "rxjs/Rx"],
     "interface-over-type-literal": true,
-    "member-access": false,
+    "member-access": true,
     "member-ordering": [
       true,
       {
@@ -79,6 +86,8 @@
     "template-banana-in-box": true,
     "template-no-negated-async": true,
     "use-lifecycle-interface": true,
-    "use-pipe-transform-interface": true
+    "use-pipe-transform-interface": true,
+    "no-implicit-dependencies": false,
+    "no-submodule-imports": false
   }
 }

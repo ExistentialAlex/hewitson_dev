@@ -1,1 +1,20 @@
-<p>home-page works!</p>
+<div class="full-page">
+  <hewitson-dev-header></hewitson-dev-header>
+  <h1 class="list__title">Projects</h1>
+  <div class="list">
+    <hewitson-dev-project-list
+    [projects]="projects"
+  ></hewitson-dev-project-list>
+  </div>
+  <h1 class="about__title">Get in Touch</h1>
+  <div class="about">
+    <hewitson-dev-profile-card
+      [image]="image"
+      [name]="name"
+      [job]="job"
+      [email]="email"
+      [socialLinks]="socialLinks"
+    ></hewitson-dev-profile-card>
+    <hewitson-dev-contact-form></hewitson-dev-contact-form>
+  </div>
+</div>

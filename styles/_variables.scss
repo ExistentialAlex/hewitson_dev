@@ -3,43 +3,47 @@
   // Colour Settings //
   /////////////////////
 
-  --grey0: #f8f8f8;
-  --grey1: #dbe1e8;
-  --grey2: #b2becd;
-  --grey3: #6c7983;
-  --grey4: #454e56;
-  --grey5: #2a2e35;
-  --grey6: #12181b;
-  --clr-primary: #b9d8c2;
-  --clr-secondary: #9ac2c9;
-
-  .light {
-    --bg: var(--grey0);
-    --bg-nav: var(--grey0);
-    --bg-dropdown: var(--grey0);
-    // --link: var(--grey0);
-    // --link-hover: saturate(darken(var(--clr-link), 15%), 10%);
-    --text: var(--grey6);
-    --text-hover: var(--clr-primary);
-    --border-clr: var(--clr-primary);
-  }
-  .dark {
-    --bg: var(--grey5);
-    --bg-nav: var(--grey5);
-    --bg-dropdown: var(--grey6);
-    --text: var(--grey0);
-    --text-hover: var(--clr-secondary);
-    --border-clr: var(--clr-secondary);
-  }
-
-  /////////////////////
-  ////// Shadow ///////
-  /////////////////////
-
+  --grad0: #f8f8f8;
+  --grad1: #dbe1e8;
+  --grad2: #b2becd;
+  --grad3: #6c7983;
+  --grad4: #454e56;
+  --grad5: #2a2e35;
+  --grad6: #12181b;
+  --clr-primary: #f54291;
+  --clr-primary-hover: #CB2D6F;
+  --clr-accent: #6A7CE9;
+  --border-radius: 1rem;
   --shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
 
+  .light {
+    --bg: var(--grad0);
+    --bg-nav: #ffffff;
+    --bg-card: #ffffff;
+    --bg-dropdown: var(--grad0);
+    --title: var(--clr-primary);
+    --text: var(--grad6);
+    --text-muted: var(--grad2);
+    --text-hover: darken(var(--clr-primary), 15%);
+    --border-clr: var(--grad0);
+    --btn: var(--clr-primary);
+    --bnt-hover: var(--grad0);
+    --btn-text: var(--grad0);
+    --btn-text-hover: var(--clr-primary);
+  }
+  .dark {
+    --bg: var(--grad6);
+    --bg-nav: var(--grad5);
+    --bg-dropdown: var(--grad5);
+    --title: var(--clr-primary);
+    --text: var(--grad0);
+    --text-hover: var(--clr-secondary);
+    --border-clr: var(--clr-secondary);
+    --shadow: rgba(178, 190, 205, 0.3) 0px 2px 5px 0px;
+  }
+
   /////////////////////
-  ////// Z-index //////
+  //     Z-index     //
   /////////////////////
 
   --z-max: 1000;
@@ -52,7 +56,7 @@
   --z-min: 0;
 
   /////////////////////
-  //////// Size ///////
+  //       Size      //
   /////////////////////
 
   // Font sizes
@@ -70,6 +74,8 @@
   --font-baseline: calc(var(--font-size-body) * 1.5);
 
   // Distances
+  --size-xxxl: /* 432 */ calc(var(--font-baseline) * 16);
+  --size-xxl: /* 216 */ calc(var(--font-baseline) * 8);
   --size-xl: /* 108px */ calc(var(--font-baseline) * 4);
   --size-l:  /* 54px */ calc(var(--font-baseline) * 2);
   --size-m:  /* 27px */ calc(var(--font-baseline));
@@ -80,5 +86,6 @@
   // Navbar Settings //
   /////////////////////
 
-  --nav-height: 4rem;
+  --nav-height: 3rem;
+  --nav-height-bottom: 5rem;
 }

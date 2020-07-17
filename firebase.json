@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "hewitson-dev",
+      "public": "dist/apps/hewitson-dev",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
