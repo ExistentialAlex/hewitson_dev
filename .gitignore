@@ -26,7 +26,6 @@
 
 # Firebase
 .firebase/*
-firebase.environment.ts
 
 # misc
 /.sass-cache
