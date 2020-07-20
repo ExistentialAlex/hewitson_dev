@@ -1,7 +1,6 @@
 .about {
   --grid-gap: 2rem;
-  padding: 1rem 0px;
-  margin-top: 5rem;
+  padding: 2rem 0rem 0rem;
   &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
