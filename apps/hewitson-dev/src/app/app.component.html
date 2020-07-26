@@ -1,6 +1,8 @@
-<hewitson-dev-nav-bar class="navbar" [links]="links"></hewitson-dev-nav-bar>
-<div class="content">
-  <router-outlet></router-outlet>
+<div class="content-holder">
+  <hewitson-dev-nav-bar class="navbar" [links]="links"></hewitson-dev-nav-bar>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  <hewitson-dev-bottom-nav class="bottom-nav" [links]="links">
+  </hewitson-dev-bottom-nav>
 </div>
-<hewitson-dev-bottom-nav class="bottom-nav" [links]="links">
-</hewitson-dev-bottom-nav>
