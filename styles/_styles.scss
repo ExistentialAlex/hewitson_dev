@@ -66,5 +66,6 @@ a {
   background: var(--bg-card);
   border: none;
   box-shadow: var(--shadow);
-  border-radius: 1rem;
+  border-radius: var(--border-radius);
+  overflow: hidden;
 }
