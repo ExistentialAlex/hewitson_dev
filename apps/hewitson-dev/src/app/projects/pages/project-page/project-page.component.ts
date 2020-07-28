@@ -1,17 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/firestore';
-import { Project, hewProjects } from '@hewitson-dev/utilities';
-import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { Project, hewProjects, hewTags, Tag } from '@hewitson-dev/utilities';
 
 @Component({
   selector: 'hewitson-dev-project-page',
   templateUrl: './project-page.component.html',
   styleUrls: ['./project-page.component.scss'],
 })
-export class ProjectPageComponent implements OnInit {
+export class ProjectPageComponent {
   public project: Project;
+  public tags: Tag[];
 
   constructor(
     private readonly activatedRoute: ActivatedRoute,
@@ -23,10 +22,14 @@ export class ProjectPageComponent implements OnInit {
         .valueChanges()
         .subscribe((project) => {
           this.project = { id: params['id'], ...project };
-          console.log(this.project);
+          this.tags = [];
+          for (const tag of project.tags) {
+            this.firestore
+              .doc<Tag>(`${hewTags}/${tag}`)
+              .valueChanges()
+              .subscribe((finalTag) => this.tags.push(finalTag));
+          }
         });
     });
   }
-
-  ngOnInit(): void {}
 }
