@@ -33,6 +33,6 @@
 
 @media only screen and (max-width: 600px) {
   .header {
-    --header-height: calc(100vh - var(--nav-height) - var(--nav-height-bottom));
+    --header-height: calc(50vh - var(--nav-height) - var(--nav-height-bottom));
   }
 }

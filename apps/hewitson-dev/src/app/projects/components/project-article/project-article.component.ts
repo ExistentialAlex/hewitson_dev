@@ -1,17 +1,18 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Tag } from '@hewitson-dev/utilities';
 
 @Component({
   selector: 'hewitson-dev-project-article',
   templateUrl: './project-article.component.html',
   styleUrls: ['./project-article.component.scss']
 })
-export class ProjectArticleComponent implements OnInit {
+export class ProjectArticleComponent {
 
+  @Input() public title: string;
+  @Input() public tags: Tag[];
   @Input() public markdownSrc: string;
 
-  constructor() { }
 
-  ngOnInit(): void {
-  }
+  constructor() { }
 
 }

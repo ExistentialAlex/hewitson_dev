@@ -1,3 +1,14 @@
 <div class="article__container">
+  <h1 class="article__title">
+    {{ title }}
+  </h1>
+  <div class="article__tags">
+    <hewitson-dev-tag
+      *ngFor="let tag of tags"
+      [name]="tag.name"
+      [colour]="tag.colour"
+      [textColour]="tag.textColour"
+    ></hewitson-dev-tag>
+  </div>
   <markdown [src]="markdownSrc" class="article"></markdown>
 </div>

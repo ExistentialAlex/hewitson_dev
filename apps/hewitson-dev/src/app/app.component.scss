@@ -13,7 +13,7 @@
 
 .content {
   --content-pad: 5rem;
-  padding: 1rem var(--content-pad);
+  padding: 0 var(--content-pad);
   overflow-x: hidden;
   overflow-y: scroll;
 }

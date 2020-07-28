@@ -1,6 +1,6 @@
 .about {
   --grid-gap: 2rem;
-  padding: 2rem 0rem 0rem;
+  padding: 3rem 0rem 0rem;
   &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
