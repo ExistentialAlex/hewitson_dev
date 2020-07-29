@@ -11,6 +11,7 @@ import { ProjectHeaderComponent } from './components/project-header/project-head
 import { ProjectArticleComponent } from './components/project-article/project-article.component';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { TagComponent } from './components/tag/tag.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { TagComponent } from './components/tag/tag.component';
     MarkdownModule.forRoot({ loader: HttpClient }),
     HttpClientModule,
     AngularFirestoreModule,
+    FontAwesomeModule
   ],
 })
 export class ProjectsModule {}

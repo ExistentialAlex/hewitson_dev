@@ -2,9 +2,10 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  img?: string;
   mdFile: string;
+  views: number;
   tags?: string[];
+  img?: string;
 }
 
 export interface Tag {

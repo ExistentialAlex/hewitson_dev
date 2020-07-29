@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AngularFirestore } from '@angular/fire/firestore';
 import { Project, hewProjects, hewTags, Tag } from '@hewitson-dev/utilities';
+import * as firebase from 'firebase/app';
 
 @Component({
   selector: 'hewitson-dev-project-page',
@@ -30,6 +31,8 @@ export class ProjectPageComponent {
               .subscribe((finalTag) => this.tags.push(finalTag));
           }
         });
+        const increment1 = firebase.firestore.FieldValue.increment(1);
+        this.firestore.doc(`${hewProjects}/${params['id']}`).update({views: increment1});
     });
   }
 }
