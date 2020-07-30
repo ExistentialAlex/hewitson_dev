@@ -3,6 +3,7 @@
   min-height: 20rem;
   background-size: cover;
   height: 100%;
+  overflow: hidden;
 
   &:hover,
   &:focus,
@@ -98,7 +99,6 @@
       height: 100%;
       width: 100%;
       z-index: 1;
-      border-radius: 1rem;
     }
 
     &--title {

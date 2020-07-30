@@ -1,3 +1,23 @@
 <div class="article__container">
+  <div class="article__title">
+    <h1 class="article__title--text">
+      {{ title }}
+    </h1>
+    <fa-icon
+      class="article__title--icon"
+      *ngIf="views"
+      [icon]="faEye"
+    ></fa-icon>
+    <p class="article__title--views">{{ views }}</p>
+  </div>
+  <div class="article__tags" *ngIf="tags.length > 0">
+    <hewitson-dev-tag
+      *ngFor="let tag of tags"
+      [name]="tag.name"
+      [colour]="tag.colour"
+      [textColour]="tag.textColour"
+      [img]="tag.logo"
+    ></hewitson-dev-tag>
+  </div>
   <markdown [src]="markdownSrc" class="article"></markdown>
 </div>
