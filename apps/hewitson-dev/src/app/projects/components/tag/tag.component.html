@@ -1,7 +1,14 @@
 <a
   class="btn tag"
-  [style]="{ 'background-color': colour, 'color': textColour, 'border-color': colour }"
+  [style]="{
+    'background-color': colour,
+    color: textColour,
+    'border-color': colour
+  }"
   [routerLink]="'/tags/' + name"
 >
+  <div class="tag__logo--container">
+    <img class="tag__logo" [src]="img" />
+  </div>
   {{ name }}
 </a>

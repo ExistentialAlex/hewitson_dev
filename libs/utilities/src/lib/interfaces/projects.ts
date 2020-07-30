@@ -9,8 +9,8 @@ export interface Project {
 }
 
 export interface Tag {
-  id: string;
   name: string;
   colour: string;
   textColour: string;
+  logo?: string;
 }

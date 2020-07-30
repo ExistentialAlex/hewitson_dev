@@ -2,6 +2,7 @@
   max-width: 100rem;
   width: 100%;
   text-align: left;
+  border-top: 1px solid var(--text-muted);
   &__container {
     display: flex;
     justify-content: center;
@@ -39,8 +40,7 @@
 
   &__tags {
     display: flex;
-    border-bottom: 1px solid var(--text-muted);
-    padding: 0rem 0 1rem;
+    padding: 0rem 0 0.75rem;
 
     &--title {
       color: var(--text-muted);
