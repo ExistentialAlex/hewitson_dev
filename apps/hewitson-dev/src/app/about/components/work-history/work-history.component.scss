@@ -17,6 +17,13 @@
 
   &__item {
     width: 100%;
+    border-bottom: 1px solid var(--text-muted);
+    margin-bottom: 1rem;
+
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
   }
 
   &__top {
@@ -33,6 +40,7 @@
   &__company {
     margin: 0;
     margin-left: 0.5rem;
+    color: var(--text);
 
     &:hover {
       &::after {
@@ -54,7 +62,11 @@
   }
 
   &__dates {
-      margin: 0;
-      color: var(--text-muted);
+    margin: 0;
+    color: var(--text-muted);
+  }
+
+  &__description {
+    white-space: pre-line;
   }
 }
