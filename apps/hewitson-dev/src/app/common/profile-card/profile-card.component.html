@@ -4,8 +4,15 @@
   <p class="profile__job">{{ job }}</p>
   <p class="profile__email">{{ email }}</p>
   <div class="profile__social">
-    <button class="profile__icon" *ngFor="let icon of socialLinks" (click)="navigate(icon.url)">
-      <fa-icon [icon]="icon.icon"></fa-icon>
+    <button
+      class="profile__icon"
+      *ngFor="let icon of socialLinks"
+      (click)="navigate(icon.url)"
+    >
+      <fa-icon
+        [icon]="icon.icon"
+        [styles]="{ 'width': '1.25rem', height: '1.25rem' }"
+      ></fa-icon>
     </button>
   </div>
 </div>

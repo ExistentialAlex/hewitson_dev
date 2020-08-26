@@ -1,13 +1,15 @@
 <div class="project full-page" *ngIf="project">
   <div class="project__header">
     <hewitson-dev-project-header
-      [title]="project.title"
       [img]="project.img"
     ></hewitson-dev-project-header>
   </div>
   <div class="project__article">
     <hewitson-dev-project-article
+      [title]="project.title"
       [markdownSrc]="project.mdFile"
+      [tags]="tags"
+      [views]="project.views"
     ></hewitson-dev-project-article>
   </div>
 </div>

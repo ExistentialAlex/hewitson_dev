@@ -4,13 +4,3 @@
 body {
   font-family: 'Montserrat', sans-serif;
 }
-
-.full-page {
-  margin-bottom: 1rem;
-}
-
-@media only screen and (max-width: 600px) {
-  .full-page {
-    margin-bottom: calc(var(--nav-height-bottom) + 1rem);
-  }
-}

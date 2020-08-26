@@ -11,6 +11,10 @@
     border-bottom: 2px solid var(--grad1);
     z-index: var(--z-xs);
 
+    &--text {
+      margin-bottom: 1rem;
+    }
+
     &--label,
     &--textarea {
       font-size: 1.2rem;

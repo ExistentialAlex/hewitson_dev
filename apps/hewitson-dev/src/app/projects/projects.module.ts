@@ -10,6 +10,8 @@ import { ProjectPageComponent } from './pages/project-page/project-page.componen
 import { ProjectHeaderComponent } from './components/project-header/project-header.component';
 import { ProjectArticleComponent } from './components/project-article/project-article.component';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { TagComponent } from './components/tag/tag.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     ProjectPageComponent,
     ProjectHeaderComponent,
     ProjectArticleComponent,
+    TagComponent,
   ],
   imports: [
     CommonModule,
@@ -25,6 +28,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     MarkdownModule.forRoot({ loader: HttpClient }),
     HttpClientModule,
     AngularFirestoreModule,
+    FontAwesomeModule
   ],
 })
 export class ProjectsModule {}

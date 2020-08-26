@@ -1,23 +1,24 @@
+.content-holder {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: var(--nav-height) 1fr;
+}
+
 .navbar {
   width: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
   z-index: var(--z-m);
 }
 
 .content {
   --content-pad: 5rem;
-  width: calc(100vw - calc(var(--content-pad) * 2));
-  height: calc(100vh - var(--nav-height));
-  margin-top: var(--nav-height);
-  padding: 0 var(--content-pad);
+  padding: 0 var(--content-pad) 1rem;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 .bottom-nav {
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100%;
   display: none;
   z-index: var(--z-l);
@@ -30,10 +31,12 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .content-holder {
+    grid-template-rows: var(--nav-height) 1fr var(--nav-height);
+  }
+
   .content {
     --content-pad: 1rem;
-    height: calc(100vh - (var(--nav-height) * 2));
-    margin-bottom: var(--nav-height);
   }
 
   .bottom-nav {
