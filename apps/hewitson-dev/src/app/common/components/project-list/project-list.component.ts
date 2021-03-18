@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Project } from '@hewitson-dev/utilities';
+import { Project } from '../../../common/interfaces/projects';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -8,9 +8,9 @@ import { Observable } from 'rxjs';
   styleUrls: ['./project-list.component.scss'],
 })
 export class ProjectListComponent implements OnInit {
-  @Input() public projects: Observable<Project[]>;
+  @Input() public projects: Project[];
 
   constructor() {}
 
-  ngOnInit(): void {}
+  public ngOnInit(): void {}
 }

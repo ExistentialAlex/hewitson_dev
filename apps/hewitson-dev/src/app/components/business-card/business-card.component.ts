@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SocialLink } from '@hewitson-dev/utilities';
+import { SocialLink } from '../../common/interfaces/links';
 
 @Component({
   selector: 'hewitson-dev-business-card',

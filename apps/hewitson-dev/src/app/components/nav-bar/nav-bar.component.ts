@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Link } from '@hewitson-dev/utilities';
+import { Link } from '../../common/interfaces/links';
 
 @Component({
   selector: 'hewitson-dev-nav-bar',

@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { Link } from '@hewitson-dev/utilities';
+import { Link } from './common/interfaces/links';
 import {
   faHome,
   faUser,
   faLaptopCode,
 } from '@fortawesome/free-solid-svg-icons';
-import { AngularFirestore } from '@angular/fire/firestore/firestore';
 
 @Component({
   selector: 'hewitson-dev-root',

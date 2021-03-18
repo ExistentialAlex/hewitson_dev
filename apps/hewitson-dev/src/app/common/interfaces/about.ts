@@ -7,8 +7,12 @@ export interface WorkHistory {
 }
 
 export interface Skill {
-  id: string;
   skill: string;
   description: string;
   open: boolean;
+}
+
+export interface Feedback {
+  from: string;
+  feedback: string;
 }

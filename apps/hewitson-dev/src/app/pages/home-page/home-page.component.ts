@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Project, SocialLink, hewProjects } from '@hewitson-dev/utilities';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { Project } from '../../common/interfaces/projects';
+import { SocialLink } from '../../common/interfaces/links';
 import { name, job, email, image } from '../../../assets/strings/business-card';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { projects } from '../../common/content/projects';
 
 @Component({
   selector: 'hewitson-dev-home-page',
@@ -12,27 +11,15 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
   styleUrls: ['./home-page.component.scss'],
 })
 export class HomePageComponent implements OnInit {
-  public projects: Observable<Project[]>;
+  public projects: Project[];
   public image: string;
   public name: string;
   public email: string;
   public job: string;
   public socialLinks: SocialLink[];
 
-  constructor(private readonly firestore: AngularFirestore) {
-    this.projects = this.firestore
-      .collection<Project>(hewProjects)
-      .snapshotChanges()
-      .pipe(
-        map((projects) => {
-          return projects.map((project) => {
-            return {
-              id: project.payload.doc.id,
-              ...project.payload.doc.data(),
-            };
-          });
-        })
-      );
+  constructor() {
+    this.projects = projects;
     this.name = name;
     this.email = email;
     this.job = job;
@@ -49,5 +36,5 @@ export class HomePageComponent implements OnInit {
     ];
   }
 
-  ngOnInit(): void {}
+  public ngOnInit(): void {}
 }
