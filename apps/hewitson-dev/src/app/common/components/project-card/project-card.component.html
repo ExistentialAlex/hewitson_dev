@@ -1,19 +1,17 @@
-<div
-  class="card project"
-  [style.background-image]="
-    'url(' + (project.img ? project.img : 'assets/img/placeholder.png') + ')'
-  "
->
-  <div class="multi-button" *ngIf="displayIcons">
-    <button class=""><fa-icon [icon]="faHeart"></fa-icon></button>
+<div class="card project">
+  <div class="project__img--container">
+    <img
+      class="project__img"
+      [src]="project.img ? project.img : 'assets/img/placeholder.png'"
+    />
+    <div class="project__img--overlay"></div>
   </div>
-  <div class="project__overlay">
-    <div class="project__overlay--background"></div>
-    <h1 class="project__overlay--title">{{ project.title }}</h1>
+  <div class="project__description">
+    <h1 class="project__description--title">{{ project.title }}</h1>
     <hr style="z-index: 2;" />
-    <h3 class="project__overlay--text">{{ project.description }}</h3>
+    <h3 class="project__description--text">{{ project.description }}</h3>
     <button
-      class="project__overlay--btn btn"
+      class="project__description--btn btn"
       [routerLink]="['/projects', project.id]"
     >
       <h3>Learn More</h3>

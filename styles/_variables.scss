@@ -10,9 +10,9 @@
   --grad4: #454e56;
   --grad5: #2a2e35;
   --grad6: #12181b;
-  --clr-primary: #f54291;
-  --clr-primary-hover: #CB2D6F;
-  --clr-accent: #6A7CE9;
+  --clr-primary: #2cc09c;
+  --clr-primary-hover: #cb2d6f;
+  --clr-accent: #6a7ce9;
   --border-radius: 1rem;
   --shadow: rgba(0, 0, 0, 0.3) 0px 2px 5px 0px;
 
@@ -21,7 +21,7 @@
     --bg-nav: #ffffff;
     --bg-card: #ffffff;
     --bg-dropdown: var(--grad0);
-    --title: var(--clr-primary);
+    --title: var(--grad2);
     --text: var(--grad6);
     --text-muted: var(--grad2);
     --text-hover: darken(var(--clr-primary), 15%);

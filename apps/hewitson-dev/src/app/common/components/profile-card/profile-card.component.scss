@@ -8,7 +8,26 @@
     max-width: 50%;
     position: relative;
     top: -2.5rem;
-    border: 5px solid var(--bg-card);
+    width: 17.5rem;
+    height: 17.5rem;
+    background-size: cover;
+
+    &::before {
+      content: '';
+      background: linear-gradient(
+        130deg,
+        #ff7a18,
+        #af002d 41.07%,
+        #319197 76.05%
+      );
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      width: calc(100% + 10px);
+      height: calc(100% + 10px);
+      z-index: -1;
+      border-radius: 50%;
+    }
   }
 
   &__name {
