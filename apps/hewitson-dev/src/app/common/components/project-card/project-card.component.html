@@ -1,11 +1,13 @@
 <div class="card project">
-  <div class="project__img--container">
-    <img
-      class="project__img"
-      [src]="project.img ? project.img : 'assets/img/placeholder.png'"
-    />
-    <div class="project__img--overlay"></div>
-  </div>
+  <a [routerLink]="['/projects', project.id]">
+    <div class="project__img--container">
+      <img
+        class="project__img"
+        [src]="project.img ? project.img : 'assets/img/placeholder.png'"
+      />
+      <div class="project__img--overlay"></div>
+    </div>
+  </a>
   <div class="project__description">
     <h1 class="project__description--title">{{ project.title }}</h1>
     <hr style="z-index: 2;" />

@@ -10,6 +10,7 @@ import { SocialLink } from '../../../common/interfaces/links';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { workHistory } from '../../../common/content/work-history';
 import { skills } from '../../../common/content/skills';
+import { Tag } from '../../../common/interfaces/projects';
 
 @Component({
   selector: 'hewitson-dev-about-page',
@@ -23,7 +24,7 @@ export class AboutPageComponent {
   public job: string;
   public socialLinks: SocialLink[];
   public history: WorkHistory[];
-  public skills: string[];
+  public skills: Tag[];
 
   constructor() {
     this.name = name;

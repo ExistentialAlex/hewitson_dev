@@ -5,10 +5,21 @@ import { ProjectListComponent } from './components/project-list/project-list.com
 import { RouterModule } from '@angular/router';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProfileCardComponent } from './components/profile-card/profile-card.component';
+import { TagComponent } from './components/tag/tag.component';
 
 @NgModule({
-  declarations: [ProjectCardComponent, ProjectListComponent, ProfileCardComponent],
+  declarations: [
+    ProjectCardComponent,
+    ProjectListComponent,
+    ProfileCardComponent,
+    TagComponent,
+  ],
   imports: [AngularCommon, RouterModule, FontAwesomeModule],
-  exports: [ProjectCardComponent, ProjectListComponent, ProfileCardComponent],
+  exports: [
+    ProjectCardComponent,
+    ProjectListComponent,
+    ProfileCardComponent,
+    TagComponent,
+  ],
 })
 export class ComponentsModule {}

@@ -20,15 +20,22 @@
   &__text {
     z-index: var(--z-xs);
     transition: opacity 1s ease-in-out;
+    font-size: 1.5rem;
+    margin-left: 2rem;
 
     &--container {
       display: flex;
+      width: 100%;
     }
 
     &--highlight {
-      color: var(--clr-primary);
-      width: 8rem;
+      background: var(--linear-grad);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      width: 12rem;
       margin-left: 0.5rem;
+      margin-right: auto;
     }
 
     &--hide {

@@ -8,7 +8,7 @@
   border: 1px solid;
   display: flex;
   align-items: center;
-  margin: 0 0.5rem;
+  margin: 0 0.5rem 0.5rem;
 
   &:first-child {
     margin-left: 0;
@@ -24,6 +24,7 @@
       background: var(--btn-text);
       border-radius: 50%;
       transform: translateX(-0.5rem);
+      overflow: hidden;
     }
   }
 }

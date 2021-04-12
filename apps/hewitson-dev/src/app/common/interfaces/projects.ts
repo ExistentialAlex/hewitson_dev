@@ -11,5 +11,4 @@ export interface Tag {
   name: string;
   colour: string;
   textColour: string;
-  logo?: string;
 }

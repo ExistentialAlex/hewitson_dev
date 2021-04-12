@@ -1,11 +1,19 @@
 .projects {
   &__title {
-    height: 30rem;
+    height: 20rem;
     display: flex;
     justify-content: center;
     align-items: center;
     &--text {
       font-size: 5rem;
+
+      &::after {
+        content: '';
+        position: relative;
+        display: block;
+        height: 4px;
+        background: var(--linear-grad);
+      }
     }
   }
 

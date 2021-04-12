@@ -1,8 +1,7 @@
 <div class="card profile">
-  <div
-    class="profile__img"
-    [style.background-image]="'url(' + image + ')'"
-  ></div>
+  <div class="profile__img">
+    <img class="profile__img--pic" [src]="image" />
+  </div>
   <h2 class="profile__name">{{ name }}</h2>
   <p class="profile__job">{{ job }}</p>
   <p class="profile__email">{{ email }}</p>

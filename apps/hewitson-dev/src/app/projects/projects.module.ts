@@ -9,7 +9,6 @@ import { ProjectsPageComponent } from './pages/projects-page/projects-page.compo
 import { ProjectPageComponent } from './pages/project-page/project-page.component';
 import { ProjectHeaderComponent } from './components/project-header/project-header.component';
 import { ProjectArticleComponent } from './components/project-article/project-article.component';
-import { TagComponent } from './components/tag/tag.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
@@ -18,7 +17,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ProjectPageComponent,
     ProjectHeaderComponent,
     ProjectArticleComponent,
-    TagComponent,
   ],
   imports: [
     CommonModule,

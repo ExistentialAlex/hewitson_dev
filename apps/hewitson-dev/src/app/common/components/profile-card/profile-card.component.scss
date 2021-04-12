@@ -5,28 +5,20 @@
 
   &__img {
     border-radius: 50%;
-    max-width: 50%;
     position: relative;
     top: -2.5rem;
     width: 17.5rem;
     height: 17.5rem;
-    background-size: cover;
+    background: var(--linear-grad);
 
-    &::before {
-      content: '';
-      background: linear-gradient(
-        130deg,
-        #ff7a18,
-        #af002d 41.07%,
-        #319197 76.05%
-      );
+    &--pic {
       position: absolute;
-      top: -5px;
-      left: -5px;
-      width: calc(100% + 10px);
-      height: calc(100% + 10px);
-      z-index: -1;
+      top: 3px;
+      left: 3px;
+      width: calc(100% - 6px);
+      height: calc(100% - 6px);
       border-radius: 50%;
+      background-size: cover;
     }
   }
 
@@ -57,7 +49,7 @@
   }
 
   &__icon {
-    border: 1px solid var(--clr-primary);
+    border: 1px solid var(--grad2);
     padding: 0.75rem;
     border-radius: 50%;
     margin: 0 1rem;
@@ -65,7 +57,7 @@
     background-color: var(--bg-card);
 
     &:hover {
-      background-color: var(--clr-primary);
+      background-color: var(--clr-secondary);
       color: var(--bg-card);
     }
   }

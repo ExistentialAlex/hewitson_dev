@@ -22,11 +22,7 @@
       z-index: 3;
       width: 100%;
       height: 100%;
-      background-image: linear-gradient(
-        to top left,
-        var(--clr-accent),
-        var(--clr-primary)
-      );
+      background-image: var(--linear-grad);
       opacity: 0.4;
     }
   }

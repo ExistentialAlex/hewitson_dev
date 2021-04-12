@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Tag } from '../../../common/interfaces/projects';
 
 @Component({
   selector: 'hewitson-dev-skills',
@@ -6,7 +7,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./skills.component.scss'],
 })
 export class SkillsComponent {
-  @Input() public skills: string[];
+  @Input() public skills: Tag[];
 
   constructor() {}
 }

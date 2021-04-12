@@ -1,9 +1,12 @@
+import { Tag } from './projects';
+
 export interface WorkHistory {
   title: string;
   dates: number[];
   company: string;
   description: string;
   url: string;
+  tags?: Tag[];
 }
 
 export interface Skill {

@@ -18,9 +18,15 @@
       font-size: 3rem;
       color: var(--text);
       z-index: var(--z-xs);
-      text-decoration: underline;
-      text-decoration-color: var(--clr-primary);
       margin: 0.75rem 0;
+
+      &::after {
+        content: '';
+        position: relative;
+        display: block;
+        height: 2px;
+        background: var(--linear-grad);
+      }
     }
 
     &--views {
@@ -40,7 +46,7 @@
 
   &__tags {
     display: flex;
-    padding: 0rem 0 0.75rem;
+    padding: 0;
 
     &--title {
       color: var(--text-muted);
