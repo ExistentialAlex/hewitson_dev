@@ -5,6 +5,8 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  max-width: 720px;
+  margin: 1rem auto;
 
   &__img {
     max-width: 100%;
