@@ -5,7 +5,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  max-width: 720px;
+  max-width: calc(50vw - 2rem - var(--content-pad));
   margin: 1rem auto;
 
   &__img {
