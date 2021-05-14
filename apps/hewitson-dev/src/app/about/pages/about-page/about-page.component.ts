@@ -5,16 +5,12 @@ import {
   email,
   job,
 } from '../../../../assets/strings/business-card';
-import {
-  SocialLink,
-  WorkHistory,
-  hewWorkHistory,
-  Skill,
-  hewSkills,
-} from '@hewitson-dev/utilities';
+import { WorkHistory, Skill } from '../../../common/interfaces/about';
+import { SocialLink } from '../../../common/interfaces/links';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { AngularFirestore } from '@angular/fire/firestore';
-import { map } from 'rxjs/operators';
+import { workHistory } from '../../../common/content/work-history';
+import { skills } from '../../../common/content/skills';
+import { Tag } from '../../../common/interfaces/projects';
 
 @Component({
   selector: 'hewitson-dev-about-page',
@@ -28,9 +24,9 @@ export class AboutPageComponent {
   public job: string;
   public socialLinks: SocialLink[];
   public history: WorkHistory[];
-  public skills: Skill[];
+  public skills: Tag[];
 
-  constructor(private readonly firestore: AngularFirestore) {
+  constructor() {
     this.name = name;
     this.email = email;
     this.job = job;
@@ -45,18 +41,8 @@ export class AboutPageComponent {
         url: 'https://www.linkedin.com/in/alexander-hewitson-a4a010132',
       },
     ];
-    this.firestore
-      .collection<WorkHistory>(hewWorkHistory)
-      .valueChanges()
-      .pipe(
-        map((history) => {
-          return history.sort((a, b) => b.dates[0] - a.dates[0]);
-        })
-      )
-      .subscribe((history) => (this.history = history));
-    this.firestore
-      .collection<Skill>(hewSkills)
-      .valueChanges()
-      .subscribe((skills) => (this.skills = skills));
+    this.history = workHistory;
+    this.history.sort((a, b) => b.dates[0] - a.dates[0]);
+    this.skills = skills;
   }
 }

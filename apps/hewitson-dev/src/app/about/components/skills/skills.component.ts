@@ -1,13 +1,13 @@
 import { Component, Input } from '@angular/core';
-import { Skill } from '@hewitson-dev/utilities';
+import { Tag } from '../../../common/interfaces/projects';
 
 @Component({
   selector: 'hewitson-dev-skills',
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss']
+  styleUrls: ['./skills.component.scss'],
 })
 export class SkillsComponent {
-  @Input() public skills: Skill[];
+  @Input() public skills: Tag[];
 
   constructor() {}
 }

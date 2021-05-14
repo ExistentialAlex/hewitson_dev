@@ -1,0 +1,16 @@
+.tag {
+  font-size: 0.75rem;
+  text-align: center;
+  font-weight: 500;
+  border-radius: var(--border-radius);
+  box-shadow: none;
+  border: 1px solid;
+  display: flex;
+  align-items: center;
+  margin: 0 0.5rem 0.5rem;
+  padding: 0.2rem 0.5rem;
+
+  &:first-child {
+    margin-left: 0;
+  }
+}

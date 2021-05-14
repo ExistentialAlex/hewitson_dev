@@ -1,12 +1,12 @@
 import { Component, Input } from '@angular/core';
-import { WorkHistory } from '@hewitson-dev/utilities';
+import { WorkHistory } from '../../../common/interfaces/about';
 import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'hewitson-dev-work-history',
   templateUrl: './work-history.component.html',
-  styleUrls: ['./work-history.component.scss']
+  styleUrls: ['./work-history.component.scss'],
 })
 export class WorkHistoryComponent {
   @Input() public history: WorkHistory[];

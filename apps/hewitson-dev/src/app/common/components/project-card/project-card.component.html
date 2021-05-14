@@ -1,0 +1,22 @@
+<div class="card project">
+  <a [routerLink]="['/projects', project.id]">
+    <div class="project__img--container">
+      <img
+        class="project__img"
+        [src]="project.img ? project.img : 'assets/img/placeholder.png'"
+      />
+      <div class="project__img--overlay"></div>
+    </div>
+  </a>
+  <div class="project__description">
+    <h1 class="project__description--title">{{ project.title }}</h1>
+    <hr style="z-index: 2;" />
+    <h3 class="project__description--text">{{ project.description }}</h3>
+    <button
+      class="project__description--btn btn"
+      [routerLink]="['/projects', project.id]"
+    >
+      <h3>Learn More</h3>
+    </button>
+  </div>
+</div>

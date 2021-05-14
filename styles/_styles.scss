@@ -17,6 +17,10 @@ body {
   color: var(--text);
 }
 
+pre {
+  box-shadow: none !important;
+}
+
 a {
   text-decoration: none;
 
@@ -34,15 +38,14 @@ a {
 .btn {
   background-color: var(--clr-primary);
   color: var(--btn-text);
-  border: none;
+  border: 2px solid var(--grad2);
   border-radius: 1rem;
-  box-shadow: var(--shadow);
   cursor: pointer;
 
   &:hover,
   &:focus {
-    color: var(--text) !important;
-    background-color: var(--btn-text) !important;
+    color: var(--btn-text) !important;
+    background-color: var(--clr-secondary) !important;
     outline: none;
   }
 
@@ -64,7 +67,10 @@ a {
 
 .card {
   background: var(--bg-card);
-  border: none;
-  box-shadow: var(--shadow);
+  border: 3px solid var(--grad2);
   border-radius: var(--border-radius);
+}
+
+.full-page {
+  margin-bottom: 5rem;
 }

@@ -1,0 +1,57 @@
+.project {
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: 720px;
+  min-width: 25ch;
+  margin: 1rem auto;
+
+  &__img {
+    max-width: 100%;
+    object-fit: cover;
+    display: block;
+
+    &--container {
+      position: relative;
+    }
+
+    &--overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 3;
+      width: 100%;
+      height: 100%;
+      background-image: var(--linear-grad);
+      opacity: 0.4;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 1rem;
+
+    hr {
+      height: 2px;
+      border-width: 0;
+      color: var(--grad2);
+      background-color: var(--grad2);
+      margin: 0;
+      max-width: 100%;
+    }
+
+    &--title {
+    }
+
+    &--text {
+    }
+
+    &--btn {
+      margin-top: auto;
+    }
+  }
+}

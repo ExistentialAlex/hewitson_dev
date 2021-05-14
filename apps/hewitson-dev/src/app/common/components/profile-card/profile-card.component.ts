@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { SocialLink } from '@hewitson-dev/utilities';
+import { SocialLink } from '../../../common/interfaces/links';
 
 @Component({
   selector: 'hewitson-dev-profile-card',
   templateUrl: './profile-card.component.html',
-  styleUrls: ['./profile-card.component.scss']
+  styleUrls: ['./profile-card.component.scss'],
 })
 export class ProfileCardComponent implements OnInit {
   @Input() public image: string;
@@ -13,13 +13,11 @@ export class ProfileCardComponent implements OnInit {
   @Input() public job: string;
   @Input() public socialLinks: SocialLink[];
 
-  constructor() { }
+  constructor() {}
 
-  public ngOnInit(): void {
-  }
+  public ngOnInit(): void {}
 
   public navigate(url: string) {
     return (window.location.href = url);
   }
-
 }

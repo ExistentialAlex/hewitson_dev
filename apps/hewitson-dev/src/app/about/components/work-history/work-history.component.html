@@ -8,6 +8,7 @@
   <h1 class="history__none" *ngIf="!history || history.length < 1">
     No work history
   </h1>
+  <h2 class="history__header">Work History</h2>
   <div class="history__item" *ngFor="let work of history">
     <h3 class="history__top">
       <div class="history__title">{{ work.title }}</div>

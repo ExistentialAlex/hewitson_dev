@@ -1,5 +1,5 @@
 <a
-  class="btn tag"
+  class="tag"
   [style]="{
     'background-color': colour,
     color: textColour,
@@ -7,8 +7,5 @@
   }"
   [routerLink]="'/tags/' + name"
 >
-  <div class="tag__logo--container">
-    <img class="tag__logo" [src]="img" />
-  </div>
   {{ name }}
 </a>

@@ -6,6 +6,11 @@
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: var(--grid-gap);
 
+    &--left {
+      display: grid;
+      grid-gap: var(--grid-gap);
+    }
+
     &--right {
       grid-column-end: span 2;
     }

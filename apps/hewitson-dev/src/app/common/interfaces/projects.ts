@@ -3,8 +3,7 @@ export interface Project {
   title: string;
   description: string;
   mdFile: string;
-  views: number;
-  tags?: string[];
+  tags?: Tag[];
   img?: string;
 }
 
@@ -12,5 +11,4 @@ export interface Tag {
   name: string;
   colour: string;
   textColour: string;
-  logo?: string;
 }

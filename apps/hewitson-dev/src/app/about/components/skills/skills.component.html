@@ -1,9 +1,12 @@
 <div class="card skills">
   <h1 class="skills__title">Skills</h1>
   <div class="skills__list">
-    <hewitson-dev-skill
+    <hewitson-dev-tag
       *ngFor="let skill of skills"
-      [skill]="skill"
-    ></hewitson-dev-skill>
+      [name]="skill.name"
+      [colour]="skill.colour"
+      [textColour]="skill.textColour"
+      [img]="skill.logo"
+    ></hewitson-dev-tag>
   </div>
 </div>

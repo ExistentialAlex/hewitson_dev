@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Project } from '@hewitson-dev/utilities';
+import { Project } from '../../../common/interfaces/projects';
 import { faHeart, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -17,5 +17,5 @@ export class ProjectCardComponent implements OnInit {
     this.faHeart = faHeart;
   }
 
-  ngOnInit(): void {}
+  public ngOnInit(): void {}
 }
