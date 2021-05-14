@@ -2,6 +2,7 @@
   width: 100%;
   height: var(--nav-height);
   background-color: var(--bg-nav);
+  box-shadow: var(--shadow-bottom);
 
   &__icon {
     &::after {
