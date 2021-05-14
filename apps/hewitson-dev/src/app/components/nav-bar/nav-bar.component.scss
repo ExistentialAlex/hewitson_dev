@@ -9,6 +9,10 @@
   background-color: var(--bg-nav);
 
   &__logo {
+    margin-right: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     &--img {
       max-height: calc(var(--nav-height) * 0.8);
     }

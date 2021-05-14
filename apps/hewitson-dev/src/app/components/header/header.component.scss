@@ -20,12 +20,13 @@
   &__text {
     z-index: var(--z-xs);
     transition: opacity 1s ease-in-out;
-    font-size: 1.5rem;
-    margin-left: 2rem;
+    font-size: 5rem;
+    width: 100%;
+    margin: 0;
 
     &--container {
       display: flex;
-      width: 100%;
+      flex-direction: column;
     }
 
     &--highlight {
@@ -33,9 +34,7 @@
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-      width: 12rem;
-      margin-left: 0.5rem;
-      margin-right: auto;
+      text-align: center;
     }
 
     &--hide {
@@ -63,6 +62,8 @@
     }
 
     &__text {
+      font-size: 3rem;
+
       &--container {
         display: flex;
         justify-content: center;

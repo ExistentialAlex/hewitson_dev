@@ -1,0 +1,19 @@
+<svg width="300" height="300"
+    xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <clipPath> id="logoClip">
+
+            <rect transform="rotate(-61 88.2033 153.372)" stroke="#fff" rx="10" id="svg_1" height="25.12382" width="266.4853" y="140.80963" x="-45.03932" fill="#000"/>
+            <rect transform="rotate(-90 150.764 152.959)" rx="10" stroke="#000000" id="svg_2" height="25.12382" width="241" y="140.39664" x="30.2641" fill="#000"/>
+            <rect transform="rotate(-90 246.764 152.959)" rx="10" stroke="#000000" id="svg_3" height="25.12382" width="241" y="140.39664" x="126.2641" fill="#000"/>
+            <rect transform="rotate(-180 169.764 155.959)" stroke="#000000" id="svg_4" height="25.12382" width="173" y="143.39664" x="83.26409" fill="#000"/>
+        </clipPath>
+    </defs>
+    <g>
+        <title>Layer 1</title>
+        <rect transform="rotate(-61 88.2033 153.372)" stroke="#fff" rx="10" id="svg_1" height="25.12382" width="266.4853" y="140.80963" x="-45.03932" fill="#000"/>
+        <rect transform="rotate(-90 150.764 152.959)" rx="10" stroke="#000000" id="svg_2" height="25.12382" width="241" y="140.39664" x="30.2641" fill="#000"/>
+        <rect transform="rotate(-90 246.764 152.959)" rx="10" stroke="#000000" id="svg_3" height="25.12382" width="241" y="140.39664" x="126.2641" fill="#000"/>
+        <rect transform="rotate(-180 169.764 155.959)" stroke="#000000" id="svg_4" height="25.12382" width="173" y="143.39664" x="83.26409" fill="#000"/>
+    </g>
+</svg>
