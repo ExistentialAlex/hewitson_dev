@@ -32,7 +32,6 @@
 
 @media only screen and (max-width: 600px) {
   .content-holder {
-    grid-template-rows: var(--nav-height) 1fr var(--nav-height);
   }
 
   .content {
@@ -40,6 +39,8 @@
   }
 
   .bottom-nav {
+    position: fixed;
     display: flex;
+    bottom: 0;
   }
 }
