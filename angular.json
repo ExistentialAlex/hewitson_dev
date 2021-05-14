@@ -21,10 +21,7 @@
             "polyfills": "apps/hewitson-dev/src/polyfills.ts",
             "tsConfig": "apps/hewitson-dev/tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "apps/hewitson-dev/src/favicon.ico",
-              "apps/hewitson-dev/src/assets"
-            ],
+            "assets": ["apps/hewitson-dev/src/assets"],
             "styles": [
               "apps/hewitson-dev/src/styles.scss",
               "styles/prism-one-dark-pro.css"
@@ -94,10 +91,7 @@
               "apps/hewitson-dev/tsconfig.app.json",
               "apps/hewitson-dev/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/hewitson-dev/**"
-            ]
+            "exclude": ["**/node_modules/**", "!apps/hewitson-dev/**"]
           }
         },
         "test": {
@@ -136,13 +130,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "apps/hewitson-dev-e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**",
-              "!apps/hewitson-dev-e2e/**"
-            ]
+            "tsConfig": ["apps/hewitson-dev-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/hewitson-dev-e2e/**"]
           }
         }
       }
@@ -160,10 +149,7 @@
               "libs/utilities/tsconfig.lib.json",
               "libs/utilities/tsconfig.spec.json"
             ],
-            "exclude": [
-              "**/node_modules/**",
-              "!libs/utilities/**"
-            ]
+            "exclude": ["**/node_modules/**", "!libs/utilities/**"]
           }
         },
         "test": {
