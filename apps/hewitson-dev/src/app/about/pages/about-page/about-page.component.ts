@@ -5,12 +5,17 @@ import {
   email,
   job,
 } from '../../../../assets/strings/business-card';
-import { WorkHistory, Skill } from '../../../common/interfaces/about';
+import {
+  WorkHistory,
+  Skill,
+  Education,
+} from '../../../common/interfaces/about';
 import { SocialLink } from '../../../common/interfaces/links';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { workHistory } from '../../../common/content/work-history';
 import { skills } from '../../../common/content/skills';
 import { Tag } from '../../../common/interfaces/projects';
+import { education } from '../../../common/content/education';
 
 @Component({
   selector: 'hewitson-dev-about-page',
@@ -25,6 +30,7 @@ export class AboutPageComponent {
   public socialLinks: SocialLink[];
   public history: WorkHistory[];
   public skills: Tag[];
+  public education: Education[];
 
   constructor() {
     this.name = name;
@@ -34,7 +40,7 @@ export class AboutPageComponent {
     this.socialLinks = [
       {
         icon: faGithub,
-        url: 'https://github.com/ExistentialAlex/hewitson_dev',
+        url: 'https://github.com/ExistentialAlex',
       },
       {
         icon: faLinkedin,
@@ -42,7 +48,8 @@ export class AboutPageComponent {
       },
     ];
     this.history = workHistory;
-    this.history.sort((a, b) => b.dates[0] - a.dates[0]);
+    this.history.sort((a, b) => b.roles[0].startDate - a.roles[0].startDate);
     this.skills = skills;
+    this.education = education;
   }
 }

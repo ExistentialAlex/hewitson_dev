@@ -4,9 +4,13 @@ import {
   cSharp,
   docker,
   firebase,
+  git,
+  gitlab,
   graphQL,
+  java,
   mongo,
   nestJs,
+  python,
   react,
   sql,
   typescript,
@@ -14,7 +18,6 @@ import {
 
 export const skills: Tag[] = [
   angular,
-  react,
   typescript,
   nestJs,
   docker,
@@ -23,4 +26,8 @@ export const skills: Tag[] = [
   mongo,
   firebase,
   graphQL,
+  java,
+  python,
+  git,
+  gitlab,
 ];

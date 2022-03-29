@@ -1,13 +1,15 @@
 .about {
   --grid-gap: 2rem;
-  padding: 3rem 0rem 0rem;
+  height: 100%;
+
   &__grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
     gap: var(--grid-gap);
 
     &--left {
-      display: grid;
+      display: flex;
+      flex-direction: column;
       grid-gap: var(--grid-gap);
     }
 
@@ -19,9 +21,22 @@
 
 @media only screen and (max-width: 850px) {
   .about {
+    margin-top: var(--nav-height);
     &__grid {
       &--right {
         grid-column-end: span 1;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1183px) {
+  .about {
+    &__grid {
+      display: block;
+
+      &--left {
+        margin-bottom: var(--grid-gap);
       }
     }
   }

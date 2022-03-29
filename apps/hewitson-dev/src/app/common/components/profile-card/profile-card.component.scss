@@ -24,7 +24,7 @@
 
   &__name {
     text-align: center;
-    margin: -2rem 0 0;
+    margin: -1.5rem 0 0;
     font-weight: 500;
   }
 
@@ -38,27 +38,26 @@
 
   &__email {
     text-align: center;
-    margin: 0 0 1rem;
+    margin: 0;
   }
 
   &__social {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin: auto 0 2rem;
+    margin: auto 0 0.5rem;
   }
 
   &__icon {
-    border: 1px solid var(--grad2);
+    border: none;
     padding: 0.75rem;
-    border-radius: 50%;
     margin: 0 1rem;
     color: var(--clr-primary);
     background-color: var(--bg-card);
+    transition: color 500ms ease;
 
     &:hover {
-      background-color: var(--clr-secondary);
-      color: var(--bg-card);
+      color: var(--clr-primary__hover);
     }
   }
 }

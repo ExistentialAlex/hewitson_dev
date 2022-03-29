@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, SecurityContext } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ComponentsModule } from '../common/components.module';
 import { MarkdownModule } from 'ngx-markdown';
@@ -22,7 +22,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     CommonModule,
     ProjectsRoutingModule,
     ComponentsModule,
-    MarkdownModule.forRoot({ loader: HttpClient }),
+    MarkdownModule.forRoot({
+      loader: HttpClient,
+      sanitize: SecurityContext.NONE,
+    }),
     HttpClientModule,
     FontAwesomeModule,
   ],

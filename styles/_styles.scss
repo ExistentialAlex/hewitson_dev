@@ -21,12 +21,32 @@ pre {
   box-shadow: none !important;
 }
 
-a {
-  text-decoration: none;
-
-  &:active {
+.article {
+  & > p > a {
     text-decoration: none;
     color: var(--text);
+    position: relative;
+    font-weight: 500;
+
+    &:hover {
+      &::after {
+        transform: scaleX(1);
+      }
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 2px;
+      background: var(--linear-grad);
+      transform: scaleX(0);
+      transform-origin: 0%;
+      transition: transform 500ms ease;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
   }
 }
 
@@ -41,11 +61,12 @@ a {
   border: 2px solid var(--grad2);
   border-radius: 1rem;
   cursor: pointer;
+  transition: all 500ms ease;
 
   &:hover,
   &:focus {
     color: var(--btn-text) !important;
-    background-color: var(--clr-secondary) !important;
+    background-color: var(--clr-primary__hover) !important;
     outline: none;
   }
 
@@ -72,5 +93,4 @@ a {
 }
 
 .full-page {
-  margin-bottom: 5rem;
 }

@@ -3,13 +3,13 @@ import { Component, Input } from '@angular/core';
 @Component({
   selector: 'hewitson-dev-tag',
   templateUrl: './tag.component.html',
-  styleUrls: ['./tag.component.scss']
+  styleUrls: ['./tag.component.scss'],
 })
 export class TagComponent {
   @Input() public name: string;
   @Input() public colour: string;
   @Input() public textColour: string;
-  @Input() public img?: string;
+  @Input() public size = '0.75rem';
 
   constructor() {}
 }

@@ -18,6 +18,10 @@ const routes: Routes = [
       import('./about/about.module').then((m) => m.AboutModule),
   },
   {
+    path: 'tags',
+    loadChildren: () => import('./tags/tags.module').then((m) => m.TagsModule),
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',

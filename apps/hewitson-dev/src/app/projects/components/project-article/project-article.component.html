@@ -1,8 +1,14 @@
-<div class="article__container">
+<div class="article__container card">
   <div class="article__title">
     <h1 class="article__title--text">
       {{ title }}
     </h1>
+    <a class="article__title--link" [href]="link">
+      <fa-icon
+        [icon]="faGitHub"
+        [styles]="{ width: '2.5rem', height: '2.5rem' }"
+      ></fa-icon>
+    </a>
   </div>
   <div class="article__tags" *ngIf="tags.length > 0">
     <hewitson-dev-tag

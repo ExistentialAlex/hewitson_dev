@@ -1,0 +1,20 @@
+<div class="full-page t-page">
+  <h1 class="t-page__title">
+    <hewitson-dev-tag
+      [name]="currentTag.name"
+      [colour]="currentTag.colour"
+      [textColour]="currentTag.textColour"
+      [size]="'2rem'"
+    ></hewitson-dev-tag>
+  </h1>
+  <div class="t-page__projects">
+    <h1>Projects</h1>
+    <hewitson-dev-project-list
+      [projects]="tagProjects"
+    ></hewitson-dev-project-list>
+  </div>
+  <div class="t-page__history">
+    <h1>Work History</h1>
+    <hewitson-dev-work-history [history]="history"></hewitson-dev-work-history>
+  </div>
+</div>

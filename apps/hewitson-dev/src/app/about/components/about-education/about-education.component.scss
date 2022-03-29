@@ -1,0 +1,60 @@
+.education {
+  display: flex;
+  flex-direction: column;
+  &__title {
+    margin: 0;
+    padding-top: 1rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+
+    &::after {
+      content: '';
+      position: relative;
+      display: block;
+      height: 2px;
+      background: var(--linear-grad);
+    }
+  }
+
+  &__container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+
+    & > span {
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--grad1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    & > div {
+      border-left: 2px solid var(--grad1);
+      padding-left: 0.5rem;
+      margin-left: 0.5rem;
+      margin-top: 0.5rem;
+    }
+  }
+
+  &__qualification {
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    & > span {
+      font-weight: 400;
+      margin-left: 1rem;
+      color: var(--grad3);
+    }
+  }
+
+  &__school,
+  &__dates {
+    margin: 0;
+  }
+
+  &__dates {
+    color: var(--text-muted);
+  }
+}

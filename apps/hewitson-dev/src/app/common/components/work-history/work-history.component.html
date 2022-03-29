@@ -1,0 +1,37 @@
+<div class="history card">
+  <h2 class="history__none" *ngIf="history.length < 1">
+    No Associated Industry Experience
+  </h2>
+  <h2 class="history__header" *ngIf="history.length > 0">
+    Industry Experience
+  </h2>
+  <div class="history__item" *ngFor="let work of history">
+    <h2 class="history__top">
+      <a class="history__company" [href]="work.url">{{ work.company }}</a>
+    </h2>
+    <div class="history__roles">
+      <div class="history__role" *ngFor="let role of work.roles">
+        <h3 class="history__top">
+          <div class="history__title">
+            {{ role.title }}
+            <p class="history__dates">
+              <fa-icon [icon]="calendar"></fa-icon>
+              {{ role.startDate | date: 'MM/yyyy' }} -
+              {{ getSecondDate(role.endDate) | date: 'MM/yyyy' }}
+            </p>
+          </div>
+
+          <div class="history__tags">
+            <hewitson-dev-tag
+              *ngFor="let tag of role.tags"
+              [name]="tag.name"
+              [colour]="tag.colour"
+              [textColour]="tag.textColour"
+            ></hewitson-dev-tag>
+          </div>
+        </h3>
+        <p class="history__description" [innerHTML]="role.description"></p>
+      </div>
+    </div>
+  </div>
+</div>

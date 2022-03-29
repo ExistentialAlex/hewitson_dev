@@ -1,0 +1,23 @@
+<div class="card education">
+  <h2 class="education__title">Education</h2>
+  <div class="education__container" *ngFor="let edu of education">
+    <span>
+      <h3 class="education__school">
+        {{ edu.school }}
+      </h3>
+      <p class="education__dates">
+        <fa-icon [icon]="calendar"></fa-icon>
+        {{ edu.startDate | date: 'MM/yyyy' }} -
+        {{ edu.endDate | date: 'MM/yyyy' }}
+      </p>
+    </span>
+    <div>
+      <p
+        class="education__qualification"
+        *ngFor="let qual of edu.qualifications; let i = index"
+      >
+        {{ qual }}<span>{{ edu.levelsAchieved[i] }}</span>
+      </p>
+    </div>
+  </div>
+</div>
