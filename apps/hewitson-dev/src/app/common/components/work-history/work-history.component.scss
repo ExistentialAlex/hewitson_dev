@@ -106,6 +106,7 @@
 
   &__tags {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__dates {
