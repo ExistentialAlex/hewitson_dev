@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { faGithub, IconDefinition } from '@fortawesome/free-brands-svg-icons';
 import { Tag } from '../../../common/interfaces/projects';
 
 @Component({
@@ -8,8 +9,12 @@ import { Tag } from '../../../common/interfaces/projects';
 })
 export class ProjectArticleComponent {
   @Input() public title: string;
+  @Input() public link: string;
   @Input() public tags: Tag[];
   @Input() public markdownSrc: string;
+  public faGitHub: IconDefinition;
 
-  constructor() {}
+  constructor() {
+    this.faGitHub = faGithub;
+  }
 }

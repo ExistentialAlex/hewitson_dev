@@ -11,6 +11,7 @@
   --grad5: #2a2e35;
   --grad6: #12181b;
   --clr-primary: #2cc09c;
+  --clr-primary__hover: #28ac8b;
   --clr-secondary: #f26950;
   --clr-primary-hover: #cb2d6f;
   --clr-accent: #6a7ce9;
@@ -31,7 +32,7 @@
     --bg-dropdown: var(--grad0);
     --title: var(--grad2);
     --text: var(--grad6);
-    --text-muted: var(--grad2);
+    --text-muted: var(--grad3);
     --text-hover: darken(var(--clr-primary), 15%);
     --border-clr: var(--grad0);
     --btn: var(--clr-primary);

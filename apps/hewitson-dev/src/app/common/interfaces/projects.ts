@@ -5,6 +5,7 @@ export interface Project {
   mdFile: string;
   tags?: Tag[];
   img?: string;
+  githubLink?: string;
 }
 
 export interface Tag {

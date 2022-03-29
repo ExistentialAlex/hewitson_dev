@@ -13,6 +13,14 @@
 
   &__none {
     margin: 0;
+
+    &::after {
+      content: '';
+      position: relative;
+      display: block;
+      height: 2px;
+      background: var(--linear-grad);
+    }
   }
 
   &__header {
@@ -30,7 +38,7 @@
 
   &__item {
     width: 100%;
-    border-bottom: 1px solid var(--text-muted);
+    border-bottom: 2px solid var(--grad1);
     margin-bottom: 1rem;
 
     &:last-child {
@@ -43,17 +51,23 @@
     font-weight: 500;
     margin: 0;
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
   }
 
   &__title {
     margin: 0;
-    margin-right: 0.5rem;
+    display: flex;
   }
 
   &__company {
     margin: 0;
-    margin-left: 0.5rem;
+    margin-right: 0.5rem;
     color: var(--text);
+    font-weight: 600;
+    text-decoration: none;
 
     &:hover {
       &::after {
@@ -74,9 +88,32 @@
     }
   }
 
+  &__roles {
+    border-left: 2px solid var(--grad1);
+    padding-left: 1rem;
+    margin-left: 1rem;
+  }
+
+  &__role {
+    border-bottom: 2px solid var(--grad1);
+    margin-bottom: 0.5rem;
+
+    &:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+  }
+
+  &__tags {
+    display: flex;
+  }
+
   &__dates {
     margin: 0;
+    margin-left: 2rem;
     color: var(--text-muted);
+    font-size: 1.1rem;
+    font-weight: 400;
   }
 
   &__description {
