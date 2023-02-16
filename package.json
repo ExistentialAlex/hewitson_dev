@@ -60,7 +60,7 @@
     "@types/jest": "25.1.4",
     "@types/node": "~8.9.4",
     "codelyzer": "~5.0.1",
-    "cypress": "^4.1.0",
+    "cypress": "^4.12.1",
     "dotenv": "6.2.0",
     "eslint": "6.8.0",
     "firebase-tools": "^11.23.1",
